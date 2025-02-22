@@ -65,11 +65,6 @@ nav {
   
 }
 
-nav.active {
-  flex-direction: column;
-  align-items: flex-start;
-}
-
 nav h2.logo {
   font-weight: bold;
   font-size: xx-large;
@@ -85,13 +80,6 @@ nav .bars {
 ul.nav-links {
   display: flex;
   margin-left:1040px;
-}
-
-nav.active ul.nav-links {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  align-items: center;
 }
 
 li.nav-link {
@@ -154,15 +142,58 @@ li.nav-link a {
     opacity: 1;
     right: 0;
   }
-
-  @media screen and (max-width: 800px) {
-    nav .bars {
+  #menu-icon {
+    font-size: 36px;
+    color: #020101;
+    display: none;
+  }
+  @media (max-width: 768px) {
+    #menu-icon {
       display: block;
+      cursor: pointer;
+      float: right;
     }
   
-    nav .nav-links {
+    .navbar {
+      position: absolute;
+      top: 15%;
+      left: 0;
+      width: 100%;
+      height: 300px;
+      padding: 0.5rem 4%;
+      background-color: rgb(0 0 0 / 80%);
       display: none;
+      z-index: 2;
     }
+    .navbar a {
+      color: #e6e5f0;
+      margin: 19px 0px 23px 10px;
+      font-size: 19px;
+      transition: 0.3s;
+      margin: 20px;
+    }
+    .kit:hover{
+        background-color: white;
+        width:150px;
+        height: 40px;
+    }
+    ul.nav-links {
+      display: block;
+      color: white;
+      margin: 0;
+      text-decoration: none;
+  }
+  li.nav-link{
+    padding:0;
+  }
+  li .nav-link a{
+    width:100%;
+  }
+  .nav-link.auth{
+    width:120px;
+    height: 24px;
+
+  }
   }
   .display{
     margin-top:10px;
