@@ -149,8 +149,8 @@ li.nav-link a {
   }
   @media (max-width: 768px) {
       .address{
-      grid-template-columns: 75% 32% 21%;
-    }
+          grid-template-columns: 75% 32% 21%;
+      }
       
     #menu-icon {
       display: block;
