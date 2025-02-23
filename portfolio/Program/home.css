@@ -148,10 +148,10 @@ li.nav-link a {
     display: none;
   }
   @media (max-width: 768px) {
-      .address{
-          grid-template-columns: 75% 32% 21%;
-      }
-      
+    .address{
+      grid-template-columns: 87% 32% 21%;
+
+    }
     #menu-icon {
       display: block;
       cursor: pointer;
