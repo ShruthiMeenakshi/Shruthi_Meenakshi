@@ -52,7 +52,7 @@
 }
 
 #menu-icon {
-  font-size: 36px;
+  font-size: 40px;
   color: #ffffff;
   display: none;
 }
@@ -67,6 +67,7 @@
   #menu-icon {
     display: block;
     cursor: pointer;
+    margin-right: 40px;
   }
 
   .navbar {
@@ -86,31 +87,9 @@
     transition: 0.3s;
   }
 
-  .navbar.active {
-    display: block;
-  }
-
   .navbar a {
     display: block;
     margin: 1.5rem 0;
-  }
-
-  .nav-bg {
-    position: absolute;
-    top: 79px;
-    left: 0;
-    width: 100%;
-    height: 295px;
-    background: rgba(255, 255, 255, 0.1);
-    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    z-index: 99;
-    display: none;
-  }
-
-  .nav-bg.active {
-    display: block;
-   
   }
 }
 body{
@@ -118,7 +97,8 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    min-height:100vh;
+    height:110vh;
+    background-attachment: fixed;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -247,4 +227,31 @@ body{
   margin:77px 0px 0px 60px;
   font-size: 20px;
   justify-items: start;
+}
+@media (max-width:768px) {
+  .divisionbox{
+    grid-template-columns: 1fr;
+  }
+  .contactbox{
+    height: 105vh;
+    backdrop-filter: blur(3px);
+  }
+  .othersinfo{
+  border: none;}
+
+  .othersinfo::before{
+  content: "CONTACT ME"; 
+  display: block;
+  font-size: 2em; 
+  font-weight: bold;
+  color: #f9f7f7; 
+  text-align: center;
+  margin-top: 20px;
+  }
+  .myinfo{
+    display: none;
+  }
+  .inputform{
+    margin: 50px 0px 0px 53px;
+  }
 }
