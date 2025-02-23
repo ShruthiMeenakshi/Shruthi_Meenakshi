@@ -246,7 +246,6 @@ li.nav-link a {
     text-transform: uppercase;
     text-decoration: none;
     padding: 11px 26px;
-    display: inline-block;
     border-radius: 100px;
     transition: all .2s;
     position: absolute;
@@ -307,7 +306,8 @@ li.nav-link a {
 .work{
   background-color: rgb(255, 225, 253);
   margin-top: -20px;
-  height:650px;
+  height: 100%;
+  padding: 0 50px 50px 50px;
 }
 .myworks{
   padding: 45px 0px 0px 0px;
@@ -590,4 +590,40 @@ footer{
 .quicklink a:hover{
   color: aqua;
   padding-top: 8px;
+}
+@media (max-width: 768px){
+  .threecolumn{
+    display: none;
+  }
+  .btn{
+    display:none;
+  }
+  .threepic{
+    grid-template-columns: 1fr;
+    gap:35px;
+  }
+  .profile{
+    grid-template-columns: 1fr;
+  }
+  .bigprofile{
+    height: auto;
+  }
+  .extras{
+    width:88%;
+  }
+  form.inputform {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    margin-top: -46px;
+}
+.submitbtn{
+  margin:0;
+}
+  .myintro{
+    margin-left: 140px;
+    margin-left: 140px;
+    display: inline-grid;
+    align-content: center;
+    text-align: justify;
+  }
 }
