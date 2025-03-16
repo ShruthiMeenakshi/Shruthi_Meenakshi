@@ -147,7 +147,7 @@ li.nav-link a {
     color: #020101;
     display: none;
   }
-  @media (max-width: 768px) {
+  @media (min-width: 600px) and (max-width: 991px) {
     .address{
       grid-template-columns: 87% 32% 21%;
 
@@ -595,7 +595,7 @@ footer{
   color: aqua;
   padding-top: 8px;
 }
-@media (max-width: 768px){
+@media (min-width: 600px) and (max-width: 991px){
   .threecolumn{
     display: none;
   }
