@@ -683,6 +683,7 @@ li .nav-link a{
 }
 .container p{
   font-size: 20px;
+  margin: 0;
 }
 .container h1{
   font-size: 30px;
