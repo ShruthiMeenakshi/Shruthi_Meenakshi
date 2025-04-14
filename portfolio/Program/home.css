@@ -698,7 +698,7 @@ li .nav-link a{
   grid-template-columns: 1fr;
   gap:35px;
 }
-}
 .profile{
   grid-template-columns: 1fr;
+}
 }
