@@ -1,1 +1,1 @@
-Visit my site using https://shruthimeenakshi.github.io/portfolio/portfolio/Program/home.html
+Visit my site using  https://shruthimeenakshi.github.io/Shruthi_Meenakshi/portfolio/Program/home.html
