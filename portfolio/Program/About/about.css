@@ -382,7 +382,7 @@ animation:moveInBottom;
 animation-delay: calc(var(--scroll) * -1s);
 margin-left:45px;
 margin-right:45px;
-margin-top: 170px;
+margin-top: 5em;
 }
 .heading h1{
   color:white;
