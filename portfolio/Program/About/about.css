@@ -218,7 +218,6 @@ body {
 .columnp{
   white-space: nowrap;
   overflow: hidden;
-  transform: translateY(-50%);  
   animation: 
   typewriter 1s steps(50) 0.5s 1 normal both, 
   blinkingCursor 500ms steps(50) infinite normal;
