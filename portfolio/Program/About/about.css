@@ -218,7 +218,7 @@ body {
 
 .threecolumn {
   display: grid;
-  grid-template-columns: 24% 24% 38%;
+  grid-template-columns: 24% 24% 24%;
   font-size: 1.5rem;
   margin-top: -1.75rem;
 }
@@ -304,6 +304,7 @@ body {
 }
 
 .aboutsection {
+  display: grid;
   margin-top: 5.625rem; 
   margin-left: 7rem; 
   animation: entering;
@@ -944,4 +945,30 @@ body {
 .rightbtn {
   font-size: 1.625rem;
   padding: 0.5rem 0.5625rem;
+}
+footer{
+  background-color: #080320;
+  color:white;
+  padding: 10px;
+}
+.copyright{
+  text-align: right;
+  margin-right: 10px;
+  margin-top: -34px;
+}
+.quicklink{
+  padding: 30px 0px 0px 10px;
+    width: 450px;
+    height: 20px;
+}
+.quicklink a{
+  color: #e5e7f4;
+  padding: 0px 10px 0px 0px;
+  text-decoration: none;
+  cursor:pointer;
+  transition: 0.5s ease-out;
+}
+.quicklink a:hover{
+  color: aqua;
+  padding-top: 8px;
 }
