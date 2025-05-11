@@ -218,7 +218,7 @@ body {
 
 .threecolumn {
   display: grid;
-  grid-template-columns: 24% 20% 28%;
+  grid-template-columns: 22% 28% 28%;
   font-size: 1.5rem;
   margin-top: -1.75rem;
   margin-bottom: 2rem;
