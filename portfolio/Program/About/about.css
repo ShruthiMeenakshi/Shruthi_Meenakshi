@@ -305,18 +305,16 @@ body {
 
 .aboutsection {
   display: grid;
-  grid-template-columns: 50% 50%;
   margin-top: 5.625rem; 
-  margin-left: 10rem; 
+  margin-left: 7rem; 
   animation: entering;
   animation-duration: 2s;
   position: relative;
-  height: 60rem; 
+  height: 100%; 
 }
 
-.about {
-  width: 43.75rem; 
-  margin-left: 1.875rem; 
+.about { 
+  margin-right: 1.6rem; 
 }
 
 .about h1 {
@@ -334,12 +332,12 @@ body {
 .about li {
   font-size: 1.25rem; 
   line-height: 2.0;
+  width:38rem;
 }
 
 .about ul {
   grid-template-columns: 50% 50%;
   display: grid;
-  text-align: justify;
   column-gap: 3.0625rem;
   row-gap: 0.625rem; 
 }
@@ -349,18 +347,6 @@ body {
   text-shadow: 0px 0.0625rem 0.25rem #a4f0ff; 
 }
 
-.image {
-  background-image: url("../media/networking\ technology.webp");
-  width: 32.75rem; 
-  height: 25.9375rem; 
-  background-size: cover;
-  background-repeat: no-repeat;
-  border-radius: 12.5rem; 
-  background-position: -1.6875rem -0.125rem; 
-  margin-top: 8.125rem; 
-  margin-left: 8rem; 
-  background-position: -3.5625rem; 
-}
 
 @keyframes entering {
   from {
