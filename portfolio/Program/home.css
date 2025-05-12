@@ -37,6 +37,7 @@ header {
 .icons{
   display: flex;
   justify-content: flex-end;
+  margin-right: 5rem;
 }
 
 .iconsub a {
