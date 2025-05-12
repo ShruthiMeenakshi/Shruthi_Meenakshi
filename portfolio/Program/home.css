@@ -28,11 +28,15 @@ header {
 }
 
 .iconsub {
-  display: grid;
-  grid-template-columns: 8% 8% 8%;
+  display: flex;
   font-size: 20px;
-  justify-content: end;
+  justify-content: space-evenly;
   margin-top: 1rem;
+  width: 10rem;
+}
+.icons{
+  display: flex;
+  justify-content: flex-end;
 }
 
 .iconsub a {
