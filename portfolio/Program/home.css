@@ -266,8 +266,9 @@ li.nav-link a {
 }
 
 .threecolumn {
-  display: grid;
-  grid-template-columns: 20% 20% 25%;
+  display: flex;
+  justify-content: flex-start;
+  gap: 3rem;
   font-size: 24px;
 }
 
