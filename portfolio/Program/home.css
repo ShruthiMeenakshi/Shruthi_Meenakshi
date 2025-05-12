@@ -22,7 +22,7 @@ header {
 .interactive {
   height: 60px;
   display: grid;
-  grid-template-columns: 50% 40%;
+  grid-template-columns: 50% 50%;
   background-color: rgb(5, 5, 56);
   color: aliceblue;
 }
