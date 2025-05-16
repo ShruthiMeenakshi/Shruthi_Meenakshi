@@ -112,6 +112,74 @@ body {
   margin: 0rem; 
 }
 
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+h1, p {
+    transition: color 0.3s ease;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #f9f9f9;
+}
+
+.toggle-container {
+    position: fixed;
+    top: 4.2rem;
+    right: 2rem;
+    z-index: 1000;
+}
+
+.toggle-label {
+    display: inline-block;
+    width: 3.75rem;
+    height: 1.875rem;
+    background-color: #f4eeee;
+    border-radius: 0.9375rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.toggle-label span {
+    position: absolute;
+    width: 50%;
+    height: 1.875rem;
+    line-height: 1.875rem;
+    text-align: center;
+    transition: opacity 0.3s ease;
+}
+
+.toggle-label .moon {
+    left: 0;
+    color: #333;
+}
+
+.toggle-label .sun {
+    right: 0;
+    color: #fff;
+    opacity: 0;
+}
+
+#darkModeToggle {
+    display: none;
+}
+
+#darkModeToggle:checked + .toggle-label {
+    background-color: #333;
+}
+
+#darkModeToggle:checked + .toggle-label .moon {
+    opacity: 0;
+}
+
+#darkModeToggle:checked + .toggle-label .sun {
+    opacity: 1;
+}
+
 .prof {
   width: 100%;
   height: 31.25rem; 
@@ -218,7 +286,7 @@ body {
 
 .threecolumn {
   display: grid;
-  grid-template-columns: 22% 28% 28%;
+  grid-template-columns: 22% 26% 28%;
   font-size: 1.5rem;
   margin-top: -1.75rem;
   margin-bottom: 2rem;
