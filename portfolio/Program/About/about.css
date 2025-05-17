@@ -285,8 +285,8 @@ body.dark-mode {
 }
 
 .threecolumn {
-  display: grid;
-  grid-template-columns: 22% 26% 28%;
+  display: flex;
+  justify-content: flex-start;
   font-size: 1.5rem;
   margin-top: -1.75rem;
   margin-bottom: 2rem;
