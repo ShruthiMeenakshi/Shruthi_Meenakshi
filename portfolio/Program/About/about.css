@@ -287,6 +287,7 @@ body.dark-mode {
 .threecolumn {
   display: flex;
   justify-content: flex-start;
+  gap:3rem;
   font-size: 1.5rem;
   margin-top: -1.75rem;
   margin-bottom: 2rem;
@@ -295,8 +296,16 @@ body.dark-mode {
 .columnp {
   white-space: nowrap;
   overflow: hidden;
-  animation: typewriter 1s steps(50) 0.5s 1 normal both, blinkingCursor 500ms steps(50) infinite normal;
+  clip-path: inset(0 100% 0 0); 
+  animation: revealText 1s steps(50) 0.5s 1 normal forwards, blinkingCursor 500ms steps(50) infinite normal;
 }
+
+@keyframes revealText {
+  to {
+    clip-path: inset(0 0 0 0); 
+  }
+}
+
 
 .portfoliobtn {
   margin-left: 12.5rem; 
