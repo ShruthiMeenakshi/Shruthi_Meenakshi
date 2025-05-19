@@ -814,6 +814,9 @@ footer {
   .container h1 {
     font-size: 30px;
   }
+  .work{
+    padding: 0 1rem 1rem 2rem;
+  }
 
   .threecolumn {
     display: none;
@@ -867,5 +870,57 @@ footer {
 
   .profile {
     grid-template-columns: 1fr;
+  }
+  .extras{
+    margin-left: -1rem;
+    width:20rem;
+    max-height: 100%;
+    padding-bottom: 2rem;
+  }
+  .contactform{
+    margin:0;
+  }
+  .inputform{
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+  }
+  .textinput {
+    padding: 10px;
+    height: 8rem;
+    width: 16rem;
+  }
+  .submitbtn{
+    margin-top: 10px;
+  }
+  .btcontact{
+    margin: 0;
+  }
+  .myintro{
+    margin-top: 3rem;
+    width:20rem;
+    margin-left: -1rem;
+  }
+  .myphoto{
+    margin: 0 0 0 2rem;
+  }
+  .myintro p{
+    text-align: center;
+  }
+  .footer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  .quicklink{
+    display: flex;
+    flex-direction: column;
+  }
+  .copyright{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    flex-direction: column-reverse;
   }
 }
