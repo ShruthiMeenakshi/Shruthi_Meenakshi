@@ -207,3 +207,86 @@ body {
 .card-social a:last-child {
   margin-right: 0;
 }
+.text_1 {
+  white-space: nowrap;
+  display: inline-block;
+  position: relative;
+  width: 0px;
+  top:4px;
+  overflow: hidden;
+  border-right: 2px solid #101010;
+  animation: text1 15s ease-in infinite;
+}
+
+.text_1::before {
+  width: 0px;
+  overflow: hidden;
+  content: " Web Developer";
+  animation: text1 15s steps(8, end) infinite;
+}
+
+@keyframes text1 {
+ 10% {
+    content: " Web Developer ";
+}
+45% {
+    content: "Software Developer ";
+}
+75% {
+    content: "Cybersecurity Analyst ";
+}
+95% {
+    content: "Data Analyst ";
+}
+0% {
+    width: 0;
+}
+5% {
+    width: 0;
+}
+10% {
+    width: 115px;
+}
+25% {
+    width: 0;
+}
+30% {
+    width: 0;
+}
+35% {
+    width: 0;
+}
+40% {
+    width: 150px;
+}
+45% {
+    width: 150px;
+}
+60% {
+    width: 0;
+}
+65% {
+    width: 0;
+}
+70% {
+    width: 170px;
+}
+75% {
+    width: 170px;
+}
+80% {
+    width: 0;
+}
+85% {
+    width: 0;
+}
+90% {
+    width: 100px;
+}
+95% {
+    width: 0;
+}
+100% {
+    width: 0;
+}
+}
