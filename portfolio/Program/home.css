@@ -230,10 +230,10 @@ li.nav-link a {
 
 .name {
   height: 600px;
-  background-image: url("../Media/name.jpeg");
+  background-image: url("../Media/Myself\ in\ my\ Future\(2\).jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: center;
   position: relative;
 
 }
@@ -246,7 +246,7 @@ li.nav-link a {
   left: 0;
   top: 0;
   z-index: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.75);
 }
 .container {
   position: relative;
