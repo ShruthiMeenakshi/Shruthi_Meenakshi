@@ -753,6 +753,10 @@ body.dark-mode .boxskill h3{
   margin: 2.6875rem 3.75rem 1.25rem 3.75rem;
   background-color: #80808061;
 }
+.colab{
+  color: white; text-decoration:underline wavy burlywood;cursor: pointer;font-size: 1.3rem;
+  pointer-events: auto;
+}
 
 .orderimg {
   background-image: url("../media/order-tracking.png");
@@ -957,6 +961,7 @@ body.dark-mode .boxskill h3{
   width: 100%;
   opacity: 0;
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  pointer-events: none;
 }
 
 .slide.active {
