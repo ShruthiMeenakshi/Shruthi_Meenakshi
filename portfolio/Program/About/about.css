@@ -757,7 +757,9 @@ body.dark-mode .boxskill h3{
   color: white; text-decoration:underline wavy burlywood;cursor: pointer;font-size: 1.3rem;
   pointer-events: auto;
 }
-
+.colab:hover{
+  color: #7fdbff;text-decoration:underline wavy #7fdbff;
+}
 .orderimg {
   background-image: url("../media/order-tracking.png");
   background-size: 31.25rem;
