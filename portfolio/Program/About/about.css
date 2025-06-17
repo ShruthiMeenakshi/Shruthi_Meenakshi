@@ -803,7 +803,8 @@ body.dark-mode .category-container h2{
   height: 33rem;
   position: relative;
   cursor: pointer;
-  border-radius: 12px;
+  border-radius: 20px;
+  border: 8px ridge #04002d;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   transition: box-shadow 0.4s ease-in-out;
   perspective: 1000px;
