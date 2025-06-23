@@ -835,6 +835,10 @@ footer{
     height: 24px;
 
   }
+  .container{
+    padding: 50px 20px;
+    width: 15rem;
+  }
 
   .container p {
     font-size: 20px;
@@ -849,11 +853,18 @@ footer{
   }
 
   .threecolumn {
-    display: none;
+    font-size: 20px;
+    flex-direction: column;
+    gap:15px;
+    padding-bottom: 1rem;
   }
 
   .btn {
-    display: none;
+    font-size: 11px;
+    margin-top: 1rem;
+  }
+  .portfoliobtn {
+    margin-left: 9rem;
   }
 
   .threepic {
