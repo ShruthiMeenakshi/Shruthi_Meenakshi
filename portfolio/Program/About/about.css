@@ -50,62 +50,6 @@ body {
   display: none;
 }
 
-@media (max-width: 992px) {
-  .header {
-    padding: 1.25rem 4%;
-  }
-}
-
-@media (max-width: 768px) {
-  #menu-icon {
-    display: block;
-    cursor: pointer;
-  }
-
-  .navbar {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    padding: 0.5rem 4%;
-    background-color: rgb(0 0 0 / 48%);
-    display: none;
-  }
-
-  .navbar a {
-    color: black;
-    font-size: 1.125rem;
-    text-decoration: none;
-    margin-left: 2.1875rem;
-    transition: 0.3s;
-  }
-
-  .navbar.active {
-    display: block;
-  }
-
-  .navbar a {
-    display: block;
-    margin: 1.5rem 0;
-  }
-
-  .nav-bg {
-    position: absolute;
-    top: 4.9375rem;
-    left: 0;
-    width: 100%;
-    height: 18.4375rem;
-    background: rgba(255, 255, 255, 0.1);
-    border-bottom: 0.125rem solid rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(0.625rem);
-    z-index: 99;
-    display: none;
-  }
-
-  .nav-bg.active {
-    display: block;
-  }
-}
 
 body {
   background-color: rgb(228, 227, 255);
@@ -1161,4 +1105,248 @@ footer {
   border-radius: 50%;
   vertical-align: middle;
   margin: 0 5px;
+}
+@media (max-width: 767px) {
+    /* Header and Navigation */
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 5%; /* Adjust padding for smaller screens */
+    }
+
+    #menu-icon {
+        display: block; /* Show hamburger icon on small screens */
+        font-size: 2rem;
+        cursor: pointer;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%; /* Position below the header */
+        left: 0;
+        width: 100%;
+        background-color: #030607be;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+        display: none; /* Hidden by default */
+        transition: .3s ease;
+        border-top: 1px solid var(--text-color); /* Subtle separator */
+        z-index: 1000; /* Ensure it's above other content */
+    }
+
+    .navbar.active {
+        display: flex; /* Show when active */
+    }
+
+    .navbar a {
+        display: block;
+        color: #ffffff;
+        padding: 0.8rem 1rem;
+        font-size: 1.2rem;
+        text-align: left;
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .navbar a:hover{
+      color: #00BFFF;
+      text-decoration: none;
+    }
+    .navbar a:last-child {
+        border-bottom: none;
+    }
+
+    /* Prof section (Hero section) */
+    .prof {
+        flex-direction: column; /* Stack elements vertically */
+        text-align: center; /* Center text */
+        padding: 2rem 5%;
+    }
+
+    .name h1 {
+        font-size: 2.5rem; /* Adjust font size */
+    }
+
+    .threecolumn {
+        flex-direction: column; /* Stack columns vertically */
+        gap: 1rem; /* Space between stacked columns */
+    }
+
+    .columnp {
+        width: 100%; /* Full width for columns */
+        margin-bottom: 10px; /* Space between each role */
+    }
+
+    .btn {
+        width: 80%; /* Make buttons take more width */
+        margin-bottom: 1rem; /* Space between buttons */
+    }
+
+    .aboutpic .profimage {
+        width: 200px; /* Smaller image */
+        height: 200px;
+        margin-top: 2rem; /* Space between text and image */
+    }
+
+    /* About section */
+    .aboutsection {
+        padding: 2rem 5%;
+    }
+
+    .about p {
+        font-size: 1rem;
+    }
+
+    .about ul {
+        padding-left: 20px; /* Adjust list indentation */
+    }
+
+    /* Skills section */
+    .coding-skills .skillcont {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* More compact grid */
+        gap: 1rem;
+    }
+
+    /* Education/Journey section */
+    .heading .subheading {
+        flex-direction: column; /* Stack subheadings */
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .education {
+        flex-direction: column; /* Stack academic and achievements */
+    }
+
+    .education .point {
+        width: 100%; /* Full width */
+        padding: 0;
+        margin-bottom: 2rem;
+    }
+
+    .education .columndesc {
+        padding: 0;
+    }
+
+    .education .description {
+        padding-right: 0;
+        border-right: none;
+        border-left: 5px solid var(--main-color); /* Add a vertical line for better flow */
+        padding-left: 15px;
+    }
+
+    .education .desc {
+        margin-bottom: 1.5rem;
+    }
+
+    .education .batch,
+    .education .details {
+        text-align: left;
+    }
+
+    /* Projects section */
+    .project-grid {
+        grid-template-columns: 1fr; /* Single column for projects */
+        gap: 2rem;
+    }
+
+    .flip-card-front,
+    .flip-card-back {
+        padding: 1.5rem; /* Adjust padding */
+    }
+
+    .back-buttons {
+        flex-direction: column; /* Stack buttons */
+        gap: 0.8rem;
+    }
+
+    .back-buttons .btn-view,
+    .back-buttons .btn-github {
+        width: 100%; /* Full width buttons */
+        text-align: center;
+    }
+
+    /* Footer */
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem 5%;
+    }
+
+    .footer-content .social-links {
+        margin-top: 1rem;
+    }
+}
+
+/* Medium devices (e.g., tablets, 768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .header {
+        padding: 1rem 3%;
+    }
+
+    #menu-icon {
+        display: block; /* Still show hamburger on tablets if navbar gets cramped */
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--bg-color);
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+        display: none; /* Hidden by default */
+        transition: .3s ease;
+        border-top: 1px solid var(--text-color);
+        z-index: 1000;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        display: block;
+        padding: 0.7rem 1rem;
+        font-size: 1.1rem;
+        text-align: center;
+        width: 100%;
+    }
+
+    .prof {
+        flex-direction: column; /* Stack horizontally on tablets */
+        padding: 3rem 5%;
+    }
+
+    .prof .name,
+    .prof .aboutpic {
+        width: 100%; /* Take full width */
+        text-align: center;
+    }
+
+    .aboutpic .profimage {
+        margin-top: 2rem;
+    }
+
+    .threecolumn {
+        flex-wrap: wrap; /* Allow wrapping */
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .columnp {
+        width: 45%; /* Two columns */
+    }
+
+    .coding-skills .skillcont {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .project-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 2 columns for projects */
+    }
 }
