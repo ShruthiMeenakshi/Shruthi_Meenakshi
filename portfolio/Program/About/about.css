@@ -4,6 +4,8 @@ body {
   margin: 0px;
   padding: 0px;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
 }
 
 .header {
@@ -895,7 +897,6 @@ body.dark-mode .category-container h2{
   background-position: center;
 }
 
-
 .front-content {
   padding: 24px;
   text-align: left;
@@ -1350,3 +1351,149 @@ footer {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 2 columns for projects */
     }
 }
+.min-h-screen {
+            min-height: 100vh;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .items-center {
+            align-items: center;
+        }
+
+        .justify-center {
+            justify-content: center;
+        }
+
+        .py-12 {
+            padding-top: 3rem; /* 48px */
+            padding-bottom: 3rem; /* 48px */
+        }
+
+        .px-4 {
+            padding-left: 1rem; /* 16px */
+            padding-right: 1rem; /* 16px */
+        }
+
+        .sm\:px-6 {
+            /* For screens larger than 640px */
+            padding-left: 1.5rem; /* 24px */
+            padding-right: 1.5rem; /* 24px */
+        }
+
+        .lg\:px-8 {
+            /* For screens larger than 1024px */
+            padding-left: 2rem; /* 32px */
+            padding-right: 2rem; /* 32px */
+        }
+
+        .max-w-7xl {
+            max-width: 80rem; /* 1280px */
+        }
+
+        .mx-auto {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-4xl {
+            font-size: 2.25rem; /* 36px */
+            line-height: 2.5rem; /* 40px */
+        }
+
+        .font-extrabold {
+            font-weight: 800;
+        }
+
+        .text-gray-900 {
+            color: #1f2937; /* Slightly darker gray for better contrast */
+        }
+
+        .mb-12 {
+            margin-bottom: 3rem; /* 48px */
+        }
+
+        .grid {
+            display: grid;
+        }
+
+        .grid-cols-1 {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+
+        .gap-8 {
+            gap: 2rem; /* 32px */
+        }
+
+        /* Card specific styles */
+        .tool-card {
+            background-color: #ffffff;
+            border-radius: 0.75rem; /* 12px */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Softer shadow */
+            padding: 1.5rem; /* 24px */
+            transform: translate(0, 0); /* Ensure transform property is present for transition */
+            transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid #e5e7eb; /* Subtle border */
+        }
+
+        .tool-card:hover {
+            transform: translateY(-5px) scale(1.02); /* Lift and slightly scale */
+            box-shadow: 0 15px 30px -8px rgba(0, 0, 0, 0.2); /* More pronounced shadow on hover */
+        }
+
+        .tool-card h3 {
+            font-size: 1.625rem; /* Slightly larger heading */
+            line-height: 2rem;
+            font-weight: 700; /* Bolder heading */
+            color: #1f2937; /* Darker color for headings */
+            margin-bottom: 0.75rem; /* 12px */
+        }
+
+        .tool-card p {
+            font-size: 1rem; /* Standard paragraph size */
+            color: #4b5563; /* Slightly darker text for readability */
+        }
+
+        /* About Section Styles - These styles are no longer directly used but kept for reference if needed */
+
+
+        .proficient-tools-heading {
+            font-size: 2.5rem; /* Larger heading for tools section */
+            text-align: center;
+            padding-top: 4rem; /* Adjusted padding */
+            padding-bottom: 2rem; /* Adjusted padding */
+            color: #1f2937;
+            font-weight: 900; /* Bolder */
+            letter-spacing: -0.025em;
+        }
+
+        .proficient-tools-heading span {
+            color: #4a5568;
+        }
+
+        /* Responsive adjustments for sm and lg breakpoints */
+        @media (min-width: 640px) {
+            .sm\:px-6 {
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+            }
+            .sm\:grid-cols-2 {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .lg\:px-8 {
+                padding-left: 2rem;
+                padding-right: 2rem;
+            }
+            .lg\:grid-cols-3 {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+        }
