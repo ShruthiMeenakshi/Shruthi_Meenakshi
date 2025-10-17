@@ -1,4 +1,4 @@
-<<<<<<< HEAD:Program/navjs.js
+
 const bx = document.querySelector('#menu-icon');
 const navbar = document.querySelector('.navbar');
 
