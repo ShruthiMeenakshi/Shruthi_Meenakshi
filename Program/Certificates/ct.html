@@ -1,0 +1,1418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Certificates Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3a86ff',
+                        secondary: '#8338ec',
+                        dark: '#1a1a2e',
+                        light: '#f8f9fa',
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'fade-in': 'fadeIn 1s ease-in',
+                        'slide-up': 'slideUp 0.8s ease-out',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(50px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .certificate-card {
+            perspective: 1000px;
+            transform-style: preserve-3d;
+        }
+        .certificate-card:hover .certificate-inner {
+            transform: rotateY(180deg);
+        }
+        .certificate-inner {
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+        .certificate-front, .certificate-back {
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+        }
+        .certificate-back {
+            transform: rotateY(180deg);
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #3a86ff, #8338ec);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .bg-grid {
+            background-image: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        .project-card.hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-dark text-light min-h-screen font-sans">
+    <nav class="fixed top-0 left-0 right-0 z-50 py-2 px-4 bg-gray-800 bg-opacity-70 backdrop-blur-sm shadow-xl rounded-b-xl transition-all duration-300 ease-in-out">
+        <div class="container mx-auto flex items-center justify-between flex-wrap">
+            <!-- Brand/Logo -->
+            <a href="../home.html" class="text-2xl font-bold text-white transition-colors duration-300 hover:text-blue-300 flex items-center">
+                Shruthi Meenakshi
+            </a>
+
+            <!-- Mobile Menu Button (Hamburger) -->
+            <div class="block lg:hidden">
+                <button id="menu-button" class="flex items-center px-3 py-2 border rounded text-gray-200 border-gray-400 hover:text-white hover:border-white transition-all duration-300">
+                    <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <title>Menu</title>
+                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Navigation Links -->
+            <div id="nav-menu" class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-4 lg:mt-0">
+                <div class="text-base lg:flex-grow lg:flex lg:justify-end">
+                    <a href="../home.html" class="block lg:inline-block mt-4 lg:mt-0 text-white hover:text-blue-300 transition-all duration-300 ease-in-out px-4 py-2 rounded-lg hover:bg-gray-700 hover:bg-opacity-50 transform hover:scale-105 mr-4 last:mr-0">
+                        Home
+                    </a>
+                    <a href="../About/about.html" class="block lg:inline-block mt-4 lg:mt-0 text-white hover:text-blue-300 transition-all duration-300 ease-in-out px-4 py-2 rounded-lg hover:bg-gray-700 hover:bg-opacity-50 transform hover:scale-105 mr-4 last:mr-0">
+                        About
+                    </a>
+                    <a href="../Certificates/ct.html" class="block lg:inline-block mt-4 lg:mt-0 text-white hover:text-blue-300 transition-all duration-300 ease-in-out px-4 py-2 rounded-lg hover:bg-gray-700 hover:bg-opacity-50 transform hover:scale-105 mr-4 last:mr-0">
+                        Certificates
+                    </a>
+                    <a href="../Contact/contact.html" class="block lg:inline-block mt-4 lg:mt-0 text-white hover:text-blue-300 transition-all duration-300 ease-in-out px-4 py-2 rounded-lg hover:bg-gray-700 hover:bg-opacity-50 transform hover:scale-105 mr-4 last:mr-0">
+                        Contact
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        // JavaScript for mobile menu toggle
+        document.getElementById('menu-button').addEventListener('click', function() {
+            const navMenu = document.getElementById('nav-menu');
+            navMenu.classList.toggle('hidden');
+        });
+    </script>
+    <!-- Animated Background Elements -->
+    <div class="fixed inset-0 overflow-hidden -z-10">
+        <div class="absolute top-20 left-10 w-16 h-16 rounded-full bg-primary opacity-20 blur-xl animate-float"></div>
+        <div class="absolute top-1/3 right-20 w-24 h-24 rounded-full bg-secondary opacity-20 blur-xl animate-float" style="animation-delay: 1s;"></div>
+        <div class="absolute bottom-20 left-1/3 w-20 h-20 rounded-full bg-primary opacity-20 blur-xl animate-float" style="animation-delay: 2s;"></div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-12 relative" style="padding-top: 7rem;">
+        <!-- Header -->
+        <header class="text-center mb-16 animate-fade-in">
+            <h1 class="text-5xl md:text-6xl font-bold mb-4 gradient-text">My <span class="text-white">Certifications</span></h1>
+            <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+                A collection of professional achievements and learning milestones that showcase my expertise and dedication.
+            </p>
+            <div class="mt-8 flex justify-center space-x-4">
+                <button onclick="gotocv()" class="px-6 py-3 bg-primary rounded-full font-medium hover:bg-opacity-90 transition-all transform hover:scale-105 shadow-lg hover:shadow-primary/30">
+                    Download CV
+                </button>
+                <button onclick="gotocontact()" class="px-6 py-3 border border-primary text-primary rounded-full font-medium hover:bg-primary hover:bg-opacity-10 transition-all transform hover:scale-105">
+                    Contact Me
+                </button>
+            </div>
+        </header>
+        <script>
+            function gotocv(){
+                window.location.href ="https://www.canva.com/design/DAGbDGURuVw/W57rrM7kk_xEpyGluBd0Ig/edit?utm_content=DAGbDGURuVw&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton";
+            }
+            function gotocontact(){
+                window.location.href ="../Contact/contact.html";
+            }
+        </script>
+
+        <!-- Filter Controls -->
+        <div class="mb-12 flex flex-wrap justify-center gap-4 animate-slide-up filter-buttons" style="animation-delay: 0.2s;">
+            <button class="px-4 py-2 bg-primary rounded-full text-white font-medium" data-filter="All">All</button>
+            <button class="px-4 py-2 bg-dark border border-gray-700 rounded-full hover:bg-gray-800 transition" data-filter="Programming">Programming</button>
+            <button class="px-4 py-2 bg-dark border border-gray-700 rounded-full hover:bg-gray-800 transition" data-filter="Security">Security and cloud</button>
+            <button class="px-4 py-2 bg-dark border border-gray-700 rounded-full hover:bg-gray-800 transition" data-filter="Artificial Intelligence">Artificial Intelligence</button>
+            <button class="px-4 py-2 bg-dark border border-gray-700 rounded-full hover:bg-gray-800 transition" data-filter="Web Development">Web Development</button>
+            <button class="px-4 py-2 bg-dark border border-gray-700 rounded-full hover:bg-gray-800 transition" data-filter="Data Science">Data Science</button>
+            <button class="px-4 py-2 bg-dark border border-gray-700 rounded-full hover:bg-gray-800 transition" data-filter="Quiz">Quiz</button>
+        </div>
+
+        <!-- Certificates Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Certificate 12 -->
+            <div class="certificate-card animate-slide-up project-card" style="animation-delay: 0.8s;" data-category="Security">
+                <div class="certificate-inner h-full">
+                    <div class="certificate-front h-full bg-gray-800 rounded-xl overflow-hidden shadow-2xl border border-gray-700 flex flex-col">
+                        <div class="relative overflow-hidden h-48">
+                            <div class="absolute inset-0 bg-gradient-to-br from-blue-400 to-indigo-600 opacity-70"></div>
+                            
+                            <div class="relative z-10 h-full flex items-center justify-center">
+                                <img src="../media/cybersecurity.jpg" alt="Security" class="h-40 w-40 object-cover object-cover">
+                            </div>
+                        </div>
+                        <div class="p-6 flex-grow">
+                            <span class="inline-block px-3 py-1 bg-red-500/10 text-red-400 text-xs font-semibold rounded-full mb-3">Programming</span>
+                             <span class="inline-block px-3 py-1 bg-purple-500/10 text-purple-400 text-xs font-semibold rounded-full mb-3">Web Development</span>
+                            <h3 class="text-xl font-bold mb-2">Network Support and Security</h3>
+                            <p class="text-gray-400">Developed skills in identifying vulnerabilities and protecting systems from cyber threats.</p>
+                        </div>
+                        <div class="px-6 pb-6">
+                            <div class="flex items-center text-sm text-gray-400">
+                                <i class="fas fa-award mr-2 text-yellow-400"></i>
+                                <span>Issued: CISCO • Sep 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="certificate-back absolute inset-0 bg-gradient-to-br from-blue-400 to-indigo-600 rounded-xl p-6 flex flex-col items-center justify-center text-white">
+                        <h3 class="text-xl font-bold mb-4">Skills Gained</h3>
+                        <ul class="space-y-2 text-center">
+                            <li>Threat Analysis</li>
+                            <li>Encryption</li>
+                            <li>Network Security</li>
+                            <li>Incident Response</li>
+                            <li>Security Policies</li>
+                        </ul>
+                        <a href="../Certifications/Network_Support_and_Security_certificate_shruthimeena542-gmail-com_aefa5ede-84f3-4d88-b785-b66503244c82.pdf"><button class="mt-6 px-4 py-2 bg-white text-green-500 rounded-full font-medium hover:bg-opacity-90 transition">
+                            View Certificate
+                        </button></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Certificate 1 -->
+            <div class="certificate-card animate-slide-up project-card" style="animation-delay: 0.3s;" data-category="Web Development">
+    <div class="certificate-inner h-full">
+        <div class="certificate-front h-full bg-gray-800 rounded-xl overflow-hidden shadow-2xl border border-gray-700 flex flex-col">
+            <div class="relative overflow-hidden h-48">
+                <div class="absolute inset-0 bg-gradient-to-br from-primary to-secondary opacity-70"></div>
+
+                <div class="relative z-10 h-full flex items-center justify-center">
+                    <img src="../media/web.png" alt="web" class="h-full w-full object-cover">
+                </div>
+            </div>
+            <div class="p-6 flex-grow">
+                <span class="inline-block px-3 py-1 bg-purple-500/10 text-purple-400 text-xs font-semibold rounded-full mb-3">Web Development</span>
+                <h3 class="text-xl font-bold mb-2">Full Stack Web Development</h3>
+                <p class="text-gray-400">Gained comprehensive expertise in building end-to-end web applications, encompassing both front-end user interfaces and robust back-end systems.</p>
+            </div>
+            <div class="px-6 pb-6">
+                <div class="flex items-center text-sm text-gray-400">
+                    <i class="fas fa-award mr-2 text-yellow-400"></i>
+                    <span>Issued: MSME • Sep 10, 2022</span>
+                </div>
+            </div>
+        </div>
+        <div class="certificate-back absolute inset-0 bg-gradient-to-br from-primary to-secondary rounded-xl p-6 flex flex-col items-center justify-center text-white">
+            <h3 class="text-xl font-bold mb-4">Skills Gained</h3>
+            <ul class="space-y-2 text-center">
+                <li>Frontend Development (HTML, CSS, Bootstrap)</li>
+                <li>Backend Development (PHP)</li>
+                <li>Database Management (SQL/MySQL)</li>
+                <li>Responsive Design</li>
+                <li>Web Application Security</li>
+            </ul>
+            <a href="../Certifications/Full Stack Web Development.pdf"> <button class="mt-6 px-4 py-2 bg-white text-primary rounded-full font-medium hover:bg-opacity-90 transition">
+                    View Certificate
+                </button></a>
+        </div>
+    </div>
+</div>
+
+<!-- Certificate 2 -->
+<div class="certificate-card animate-slide-up project-card" style="animation-delay: 0.4s;" data-category="Web Development">
+    <div class="certificate-inner h-full">
+        <div class="certificate-front h-full bg-gray-800 rounded-xl overflow-hidden shadow-2xl border border-gray-700 flex flex-col">
+            <div class="relative overflow-hidden h-48">
+                <div class="absolute inset-0 bg-gradient-to-br from-purple-500 to-pink-500 opacity-70"></div>
+
+                <div class="relative z-10 h-full flex items-center justify-center">
+                    <img src="../media/Laravel and php.webp" alt="AWS" class="h-full w-full object-cover">
+                </div>
+            </div>
+            <div class="p-6 flex-grow">
+                <span class="inline-block px-3 py-1 bg-purple-500/10 text-purple-400 text-xs font-semibold rounded-full mb-3">Web Development</span>
+                <span class="inline-block px-3 py-1 bg-red-500/10 text-red-400 text-xs font-semibold rounded-full mb-3">Programming</span>
+                <h3 class="text-xl font-bold mb-2">Laravel and PHP Framework</h3>
+                <p class="text-gray-400">Developed advanced web applications using the Laravel framework, focusing on efficient MVC architecture, API development, and robust database interactions.</p>
+            </div>
+            <div class="px-6 pb-6">
+                <div class="flex items-center text-sm text-gray-400">
+                    <i class="fas fa-award mr-2 text-yellow-400"></i>
+                    <span>Issued: Board Infinity • Dec 2024</span>
+                </div>
+            </div>
+        </div>
+        <div class="certificate-back absolute inset-0 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl p-6 flex flex-col items-center justify-center text-white">
+            <h3 class="text-xl font-bold mb-4">Skills Gained</h3>
+            <ul class="space-y-2 text-center">
+                <li>Laravel Framework</li>
+                <li>MVC Architecture</li>
+                <li>RESTful API Development</li>
+                <li>Eloquent ORM</li>
+                <li>Database Migrations & Seeding</li>
+                <li>Authentication & Authorization</li>
+            </ul>
+            <a href="../Certifications/Coursera laravel and php.pdf"><button class="mt-6 px-4 py-2 bg-white text-purple-500 rounded-full font-medium hover:bg-opacity-90 transition">
+                    View Certificate
+                </button></a>
+        </div>
+    </div>
+</div>
+            <!-- Certificate 3 -->
+            <div class="certificate-card animate-slide-up project-card" style="animation-delay: 0.5s;" data-category="Security">
+    <div class="certificate-inner h-full">
+        <div class="certificate-front h-full bg-gray-800 rounded-xl overflow-hidden shadow-2xl border border-gray-700 flex flex-col">
+            <div class="relative overflow-hidden h-48">
+                <div class="absolute inset-0 bg-gradient-to-br from-green-500 to-blue-500 opacity-70"></div>
+
+                <div class="relative z-10 h-full flex items-center justify-center">
+                    <img src="../media/cybersecurity.jpg" alt="Google Cloud" class="h-50 w-50 object-cover">
+                </div>
+            </div>
+            <div class="p-6 flex-grow">
+                <span class="inline-block px-3 py-1 bg-blue-400/10 text-blue-400 text-xs font-semibold rounded-full mb-3">Security</span>
+                <h3 class="text-xl font-bold mb-2">Cyber Job Simulation</h3>
+                <p class="text-gray-400">Participated in a realistic job simulation, gaining practical experience in identifying, analyzing, and responding to cyber threats within an enterprise environment.</p>
+            </div>
+            <div class="px-6 pb-6">
+                <div class="flex items-center text-sm text-gray-400">
+                    <i class="fas fa-award mr-2 text-yellow-400"></i>
+                    <span>Issued: Deloitte • Jun 2025</span>
+                </div>
+            </div>
+        </div>
+        <div class="certificate-back absolute inset-0 bg-gradient-to-br from-green-500 to-blue-500 rounded-xl p-6 flex flex-col items-center justify-center text-white">
+            <h3 class="text-xl font-bold mb-4">Skills Gained</h3>
+            <ul class="space-y-2 text-center">
+                <li>Threat Detection & Analysis</li>
+                <li>Incident Response</li>
+                <li>Security Operations</li>
+                <li>Vulnerability Assessment</li>
+                <li>Risk Management</li>
+            </ul>
+            <a href="../Certifications/Cybersecurity_Certificate_Deloitte.pdf"><button class="mt-6 px-4 py-2 bg-white text-green-500 rounded-full font-medium hover:bg-opacity-90 transition">
+                    View Certificate
+                </button></a>
+        </div>
+    </div>
+</div>
+            <!-- Certificate 4 -->
+            <div class="certificate-card animate-slide-up project-card" style="animation-delay: 0.6s;" data-category="Programming">
+                <div class="certificate-inner h-full">
+                    <div class="certificate-front h-full bg-gray-800 rounded-xl overflow-hidden shadow-2xl border border-gray-700 flex flex-col">
+                        <div class="relative overflow-hidden h-48">
+                            <div class="absolute inset-0 bg-gradient-to-br from-blue-600 to-indigo-600 opacity-70"></div>
+                            
+                            <div class="relative z-10 h-full flex items-center justify-center">
+                                <img src="https://cdn.worldvectorlogo.com/logos/python-5.svg" alt="Python" class="h-20">
+                            </div>
+                        </div>
+                        <div class="p-6 flex-grow">
+                            <span class="inline-block px-3 py-1 bg-red-500/10 text-red-400 text-xs font-semibold rounded-full mb-3">Programming</span>
+                            <h3 class="text-xl font-bold mb-2">Python Programming</h3>
+                            <p class="text-gray-400">Mastered data analysis, visualization, and machine learning with Python ecosystem.</p>
+                        </div>
+                        <div class="px-6 pb-6">
+                            <div class="flex items-center text-sm text-gray-400">
+                                <i class="fas fa-award mr-2 text-yellow-400"></i>
+                                <span>Issued: MSME • july 2022</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="certificate-back absolute inset-0 bg-gradient-to-br from-red-500 to-orange-500 rounded-xl p-6 flex flex-col items-center justify-center text-white">
+                        <h3 class="text-xl font-bold mb-4">Skills Gained</h3>
+                        <ul class="space-y-2 text-center">
+                            <li>Pandas & NumPy</li>
+                            <li>Matplotlib & Seaborn</li>
+                            <li>File I/O & Exception Handling</li>
+                            <li>Module & Package Management</li>
+                            <li>Basic Scripting & Automation</li>
+                            <li>TensorFlow Basics</li>
+                            <li>Data Wrangling</li>
+                        </ul>
+                        <a href="../Certifications/Programming in Python.pdf"><button class="mt-6 px-4 py-2 bg-white text-green-500 rounded-full font-medium hover:bg-opacity-90 transition">
+                            View Certificate
+                        </button></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certificate 5 -->
+            <div class="certificate-card animate-slide-up project-card" style="animation-delay: 0.7s;"data-category="Security">
+                <div class="certificate-inner h-full">
+                    <div class="certificate-front h-full bg-gray-800 rounded-xl overflow-hidden shadow-2xl border border-gray-700 flex flex-col">
+                        <div class="relative overflow-hidden h-48">
+                            <div class="absolute inset-0 bg-gradient-to-br from-blue-400 to-indigo-600 opacity-70"></div>
+                            
+                            <div class="relative z-10 h-full flex items-center justify-center">
+                                <img src="../media/SAP.jpg" alt="Agile" class="h-20">
+                            </div>
+                        </div>
+                        <div class="p-6 flex-grow">
+                            <span class="inline-block px-3 py-1 bg-green-500/10 text-green-400 text-xs font-semibold rounded-full mb-3">Cloud</span>
+                            <h3 class="text-xl font-bold mb-2">SAP</h3>
+                            <p class="text-gray-400">Gained expertise in Agile methodologies and Scrum framework for project management.</p>
+                        </div>
+                        <div class="px-6 pb-6">
+                            <div class="flex items-center text-sm text-gray-400">
+                                <i class="fas fa-award mr-2 text-yellow-400"></i>
+                                <span>Issued: SAP • May 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="certificate-back absolute inset-0 bg-gradient-to-br from-yellow-500 to-red-500 rounded-xl p-6 flex flex-col items-center justify-center text-white">
+                        <h3 class="text-xl font-bold mb-4">Skills Gained</h3>
+                        <ul class="space-y-2 text-center">
+                            <li>SAP S/4HANA Cloud Architecture</li>
+                            <li>Agile Principles</li>
+                            <li>Sprint Planning</li>
+                            <li>Team Facilitation</li>
+                            <li>Stakeholder Management</li>
+                        </ul>
+                        <a href="../Certifications/SAP2024RoA20250509-27-ntylxo.pdf"><button class="mt-6 px-4 py-2 bg-white text-green-500 rounded-full font-medium hover:bg-opacity-90 transition">
+                            View Certificate
+                        </button></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certificate 6 -->
+            <div class="certificate-card animate-slide-up project-card" style="animation-delay: 0.8s;" data-category="Security">
+                <div class="certificate-inner h-full">
+                    <div class="certificate-front h-full bg-gray-800 rounded-xl overflow-hidden shadow-2xl border border-gray-700 flex flex-col">
+                        <div class="relative overflow-hidden h-48">
+                            <div class="absolute inset-0 bg-gradient-to-br from-blue-400 to-indigo-600 opacity-70"></div>
+                            
+                            <div class="relative z-10 h-full flex items-center justify-center">
+                                <img src="../media/kali.png" alt="Security" class="h-full w-full object-cover">
+                            </div>
+                        </div>
+                        <div class="p-6 flex-grow">
+                            <span class="inline-block px-3 py-1 bg-blue-400/10 text-blue-400 text-xs font-semibold rounded-full mb-3">Security</span>
+                            <h3 class="text-xl font-bold mb-2">Kali Linux</h3>
+                            <p class="text-gray-400">Developed skills in identifying vulnerabilities and protecting systems from cyber threats.</p>
+                        </div>
+                        <div class="px-6 pb-6">
+                            <div class="flex items-center text-sm text-gray-400">
+                                <i class="fas fa-award mr-2 text-yellow-400"></i>
+                                <span>Issued: Udemy • Apr 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="certificate-back absolute inset-0 bg-gradient-to-br from-blue-400 to-indigo-600 rounded-xl p-6 flex flex-col items-center justify-center text-white">
+                        <h3 class="text-xl font-bold mb-4">Skills Gained</h3>
+                        <ul class="space-y-2 text-center">
+                            <li>Threat Analysis</li>
+                            <li>Encryption</li>
+                            <li>Network Security</li>
+                            <li>Peneteration testing</li>
+                            <li>Major commands of Nmap, TOR, Wireshark, Ettercap, SQL injection, RedHawk</li>
+                        </ul>
+                        <a href="../Certifications/kali linux.jpg"><button class="mt-6 px-4 py-2 bg-white text-green-500 rounded-full font-medium hover:bg-opacity-90 transition">
+                            View Certificate
+                        </button></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Certificate 7 -->
+            <div class="certificate-card animate-slide-up project-card" style="animation-delay: 0.8s;" data-category="Data Science">
+                <div class="certificate-inner h-full">
+                    <div class="certificate-front h-full bg-gray-800 rounded-xl overflow-hidden shadow-2xl border border-gray-700 flex flex-col">
+                        <div class="relative overflow-hidden h-48">
+                            <div class="absolute inset-0 bg-gradient-to-br from-blue-400 to-indigo-600 opacity-70"></div>
+                            
+                            <div class="relative z-10 h-full flex items-center justify-center">
+                                <img src="../media/data science.png" alt="Security" class="h-40 object-cover">
+                            </div>
+                        </div>
+                        <div class="p-6 flex-grow">
+                            <span class="inline-block px-3 py-1 bg-blue-400/10 text-orange-400 text-xs font-semibold rounded-full mb-3">Data Science</span>
+                            <h3 class="text-xl font-bold mb-2">Data Science</h3>
+                            <p class="text-gray-400">Developed skills in identifying vulnerabilities and protecting systems from cyber threats.</p>
+                        </div>
+                        <div class="px-6 pb-6">
+                            <div class="flex items-center text-sm text-gray-400">
+                                <i class="fas fa-award mr-2 text-yellow-400"></i>
+                                <span>Issued: Infosys • Jun 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="certificate-back absolute inset-0 bg-gradient-to-br from-primary to-secondary rounded-xl p-6 flex flex-col items-center justify-center text-white">
+                        <h3 class="text-xl font-bold mb-4">Skills Gained</h3>
+                        <ul class="space-y-2 text-center">
+                            <li>Threat Analysis</li>
+                            <li>Encryption</li>
+                            <li>Network Security</li>
+                            <li>Incident Response</li>
+                            <li>Security Policies</li>
+                        </ul>
+                        <a href="../Certifications/data science.pdf"><button class="mt-6 px-4 py-2 bg-white text-green-500 rounded-full font-medium hover:bg-opacity-90 transition">
+                            View Certificate
+                        </button></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Certificate 8 -->
+            <div class="certificate-card animate-slide-up project-card" style="animation-delay: 0.8s;" data-category="Artificial Intelligence">
+                <div class="certificate-inner h-full">
+                    <div class="certificate-front h-full bg-gray-800 rounded-xl overflow-hidden shadow-2xl border border-gray-700 flex flex-col">
+                        <div class="relative overflow-hidden h-48">
+                            <div class="absolute inset-0 bg-gradient-to-br from-blue-400 to-indigo-600 opacity-70"></div>
+                            
+                            <div class="relative z-10 h-full flex items-center justify-center">
+                                <img src="../media/AI.jpg" alt="Security" class="h-full w-full object-cover">
+                            </div>
+                        </div>
+                        <div class="p-6 flex-grow">
+                            <span class="inline-block px-3 py-1 bg-blue-400/10 text-pink-300 text-xs font-semibold rounded-full mb-3">Artificial Intelligence</span>
+                            <h3 class="text-xl font-bold mb-2">Computer Vision</h3>
+                            <p class="text-gray-400">Developed skills in identifying vulnerabilities and protecting systems from cyber threats.</p>
+                        </div>
+                        <div class="px-6 pb-6">
+                            <div class="flex items-center text-sm text-gray-400">
+                                <i class="fas fa-award mr-2 text-yellow-400"></i>
+                                <span>Issued: Infosys • Jun 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="certificate-back absolute inset-0 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl p-6 flex flex-col items-center justify-center text-white">
+                        <h3 class="text-xl font-bold mb-4">Skills Gained</h3>
+                        <ul class="space-y-2 text-center">
+                            <li>Threat Analysis</li>
+                            <li>Encryption</li>
+                            <li>Network Security</li>
+                            <li>Incident Response</li>
+                            <li>Security Policies</li>
+                        </ul>
+                        <a href="../Certifications/computer vision.pdf"><button class="mt-6 px-4 py-2 bg-white text-green-500 rounded-full font-medium hover:bg-opacity-90 transition">
+                            View Certificate
+                        </button></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Certificate 9 -->
+            <div class="certificate-card animate-slide-up project-card" style="animation-delay: 0.8s;" data-category="Artificial Intelligence">
+                <div class="certificate-inner h-full">
+                    <div class="certificate-front h-full bg-gray-800 rounded-xl overflow-hidden shadow-2xl border border-gray-700 flex flex-col">
+                        <div class="relative overflow-hidden h-48">
+                            <div class="absolute inset-0 bg-gradient-to-br from-blue-400 to-indigo-600 opacity-70"></div>
+                            
+                            <div class="relative z-10 h-full flex items-center justify-center">
+                                <img src="../media/AI.jpg" alt="Security" class="h-full w-full object-cover">
+                            </div>
+                        </div>
+                        <div class="p-6 flex-grow">
+                            <span class="inline-block px-3 py-1 bg-blue-400/10 text-pink-300 text-xs font-semibold rounded-full mb-3">Artificial Intelligence</span>
+                            <h3 class="text-xl font-bold mb-2">Robotic Process Automation</h3>
+                            <p class="text-gray-400">Developed skills in identifying vulnerabilities and protecting systems from cyber threats.</p>
+                        </div>
+                        <div class="px-6 pb-6">
+                            <div class="flex items-center text-sm text-gray-400">
+                                <i class="fas fa-award mr-2 text-yellow-400"></i>
+                                <span>Issued: Infosys • Jun 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="certificate-back absolute inset-0 bg-gradient-to-br from-green-500 to-blue-500 rounded-xl p-6 flex flex-col items-center justify-center text-white">
+                        <h3 class="text-xl font-bold mb-4">Skills Gained</h3>
+                        <ul class="space-y-2 text-center">
+                            <li>Threat Analysis</li>
+                            <li>Encryption</li>
+                            <li>Network Security</li>
+                            <li>Incident Response</li>
+                            <li>Security Policies</li>
+                        </ul>
+                        <a href="../Certifications/RPA.pdf"><button class="mt-6 px-4 py-2 bg-white text-green-500 rounded-full font-medium hover:bg-opacity-90 transition">
+                            View Certificate
+                        </button></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Certificate 10 -->
+            <div class="certificate-card animate-slide-up project-card" style="animation-delay: 0.8s;" data-category="Artificial Intelligence">
+                <div class="certificate-inner h-full">
+                    <div class="certificate-front h-full bg-gray-800 rounded-xl overflow-hidden shadow-2xl border border-gray-700 flex flex-col">
+                        <div class="relative overflow-hidden h-48">
+                            <div class="absolute inset-0 bg-gradient-to-br from-blue-400 to-indigo-600 opacity-70"></div>
+                            
+                            <div class="relative z-10 h-full flex items-center justify-center">
+                                <img src="../media/AI.jpg" alt="Security" class="h-full w-full object-cover">
+                            </div>
+                        </div>
+                        <div class="p-6 flex-grow">
+                            <span class="inline-block px-3 py-1 bg-blue-400/10 text-pink-300 text-xs font-semibold rounded-full mb-3">Artificial Intelligence</span>
+                            <h3 class="text-xl font-bold mb-2">Introduction to AI</h3>
+                            <p class="text-gray-400">Developed skills in identifying vulnerabilities and protecting systems from cyber threats.</p>
+                        </div>
+                        <div class="px-6 pb-6">
+                            <div class="flex items-center text-sm text-gray-400">
+                                <i class="fas fa-award mr-2 text-yellow-400"></i>
+                                <span>Issued: Infosys • Jun 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="certificate-back absolute inset-0 bg-gradient-to-br from-blue-400 to-indigo-600 rounded-xl p-6 flex flex-col items-center justify-center text-white">
+                        <h3 class="text-xl font-bold mb-4">Skills Gained</h3>
+                        <ul class="space-y-2 text-center">
+                            <li>Threat Analysis</li>
+                            <li>Encryption</li>
+                            <li>Network Security</li>
+                            <li>Incident Response</li>
+                            <li>Security Policies</li>
+                        </ul>
+                        <a href="../Certifications/Into to AI.pdf"><button class="mt-6 px-4 py-2 bg-white text-green-500 rounded-full font-medium hover:bg-opacity-90 transition">
+                            View Certificate
+                        </button></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Certificate 11 -->
+            <div class="certificate-card animate-slide-up project-card" style="animation-delay: 0.8s;" data-category="Artificial Intelligence">
+                <div class="certificate-inner h-full">
+                    <div class="certificate-front h-full bg-gray-800 rounded-xl overflow-hidden shadow-2xl border border-gray-700 flex flex-col">
+                        <div class="relative overflow-hidden h-48">
+                            <div class="absolute inset-0 bg-gradient-to-br from-blue-400 to-indigo-600 opacity-70"></div>
+                            
+                            <div class="relative z-10 h-full flex items-center justify-center">
+                                <img src="../media/AI.jpg" alt="Security" class="h-full w-full object-cover">
+                            </div>
+                        </div>
+                        <div class="p-6 flex-grow">
+                            <span class="inline-block px-3 py-1 bg-blue-400/10 text-pink-300 text-xs font-semibold rounded-full mb-3">Artificial Intelligence</span>
+                            <h3 class="text-xl font-bold mb-2">Introduction to Generative AI</h3>
+                            <p class="text-gray-400">Developed skills in identifying vulnerabilities and protecting systems from cyber threats.</p>
+                        </div>
+                        <div class="px-6 pb-6">
+                            <div class="flex items-center text-sm text-gray-400">
+                                <i class="fas fa-award mr-2 text-yellow-400"></i>
+                                <span>Powered by : Google cloud&nbsp&nbsp Issued: Simplilearn • Jan 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="certificate-back absolute inset-0 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl p-6 flex flex-col items-center justify-center text-white">
+                        <h3 class="text-xl font-bold mb-4">Skills Gained</h3>
+                        <ul class="space-y-2 text-center">
+                            <li>Threat Analysis</li>
+                            <li>Encryption</li>
+                            <li>Network Security</li>
+                            <li>Incident Response</li>
+                            <li>Security Policies</li>
+                        </ul>
+                        <a href="../Certifications/Intro to Gen AI.pdf"><button class="mt-6 px-4 py-2 bg-white text-green-500 rounded-full font-medium hover:bg-opacity-90 transition">
+                            View Certificate
+                        </button></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Certificate 13 -->
+            <div class="certificate-card animate-slide-up project-card" style="animation-delay: 0.8s;" data-category="Artificial Intelligence">
+                <div class="certificate-inner h-full">
+                    <div class="certificate-front h-full bg-gray-800 rounded-xl overflow-hidden shadow-2xl border border-gray-700 flex flex-col">
+                        <div class="relative overflow-hidden h-48">
+                            <div class="absolute inset-0 bg-gradient-to-br from-blue-400 to-indigo-600 opacity-70"></div>
+                            
+                            <div class="relative z-10 h-full flex items-center justify-center">
+                               <img src="../media/AI.jpg" alt="Security" class="h-full w-full object-cover">
+                            </div>
+                        </div>
+                        <div class="p-6 flex-grow">
+                            <span class="inline-block px-3 py-1 bg-blue-400/10 text-pink-300 text-xs font-semibold rounded-full mb-3">Artificial Intelligence</span>
+                            <h3 class="text-xl font-bold mb-2">Machine Learning </h3>
+                            <p class="text-gray-400">Developed skills in identifying vulnerabilities and protecting systems from cyber threats.</p>
+                        </div>
+                        <div class="px-6 pb-6">
+                            <div class="flex items-center text-sm text-gray-400">
+                                <i class="fas fa-award mr-2 text-yellow-400"></i>
+                                <span>Issued: MSME • Mar 2023</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="certificate-back absolute inset-0 bg-gradient-to-br from-blue-400 to-indigo-600 rounded-xl p-6 flex flex-col items-center justify-center text-white">
+                        <h3 class="text-xl font-bold mb-4">Skills Gained</h3>
+                        <ul class="space-y-2 text-center">
+                            <li>Threat Analysis</li>
+                            <li>Encryption</li>
+                            <li>Network Security</li>
+                            <li>Incident Response</li>
+                            <li>Security Policies</li>
+                        </ul>
+                        <a href="../Certifications/Machine learning.pdf"><button class="mt-6 px-4 py-2 bg-white text-green-500 rounded-full font-medium hover:bg-opacity-90 transition">
+                            View Certificate
+                        </button></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Certificate 14 -->
+            <div class="certificate-card animate-slide-up project-card" style="animation-delay: 0.8s;" data-category="Programming">
+                <div class="certificate-inner h-full">
+                    <div class="certificate-front h-full bg-gray-800 rounded-xl overflow-hidden shadow-2xl border border-gray-700 flex flex-col">
+                        <div class="relative overflow-hidden h-48">
+                            <div class="absolute inset-0 bg-gradient-to-br from-blue-800 to-indigo-40 opacity-70"></div>
+                            
+                            <div class="relative z-10 h-full flex items-center justify-center">
+                                <img src="../media/Java Symbol.png" alt="Security" class="h-full w-full object-contain">
+                            </div>
+                        </div>
+                        <div class="p-6 flex-grow">
+                            <span class="inline-block px-3 py-1 bg-red-500/10 text-red-400 text-xs font-semibold rounded-full mb-3">Programming</span>
+                            <h3 class="text-xl font-bold mb-2">Java Programming</h3>
+                            <p class="text-gray-400">Developed skills in identifying vulnerabilities and protecting systems from cyber threats.</p>
+                        </div>
+                        <div class="px-6 pb-6">
+                            <div class="flex items-center text-sm text-gray-400">
+                                <i class="fas fa-award mr-2 text-yellow-400"></i>
+                                <span>Issued: TechnoOctanet Services Pvt Ltd • Oct 2024</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="certificate-back absolute inset-0 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl p-6 flex flex-col items-center justify-center text-white">
+                        <h3 class="text-xl font-bold mb-4">Skills Gained</h3>
+                        <ul class="space-y-2 text-center">
+                            <li>Threat Analysis</li>
+                            <li>Encryption</li>
+                            <li>Network Security</li>
+                            <li>Incident Response</li>
+                            <li>Security Policies</li>
+                        </ul>
+                        <a href="../Certifications/JAVA.pdf"><button class="mt-6 px-4 py-2 bg-white text-green-500 rounded-full font-medium hover:bg-opacity-90 transition">
+                            View Certificate
+                        </button></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Certificate 15 -->
+            <div class="certificate-card animate-slide-up project-card" style="animation-delay: 0.8s;" data-category="Data Science" data-category="Programming">
+                <div class="certificate-inner h-full">
+                    <div class="certificate-front h-full bg-gray-800 rounded-xl overflow-hidden shadow-2xl border border-gray-700 flex flex-col">
+                        <div class="relative overflow-hidden h-48">
+                            <div class="absolute inset-0 bg-gradient-to-br from-blue-400 to-indigo-600 opacity-70"></div>
+                            
+                            <div class="relative z-10 h-full flex items-center justify-center">
+                                <img src="../media/data science.png" alt="Security" class="h-40 object-cover">
+                            </div>
+                        </div>
+                        <div class="p-6 flex-grow">
+                            <span class="inline-block px-3 py-1 bg-red-500/10 text-red-400 text-xs font-semibold rounded-full mb-3">Programming</span>
+                            <span class="inline-block px-3 py-1 bg-blue-400/10 text-orange-400 text-xs font-semibold rounded-full mb-3">Data Science</span>
+                            <h3 class="text-xl font-bold mb-2">R in Data Science</h3>
+                            <p class="text-gray-400">Developed skills in identifying vulnerabilities and protecting systems from cyber threats.</p>
+                        </div>
+                        <div class="px-6 pb-6">
+                            <div class="flex items-center text-sm text-gray-400">
+                                <i class="fas fa-award mr-2 text-yellow-400"></i>
+                                <span>Issued: Great Learning • Jan 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="certificate-back absolute inset-0 bg-gradient-to-br from-green-500 to-blue-500 rounded-xl p-6 flex flex-col items-center justify-center text-white">
+                        <h3 class="text-xl font-bold mb-4">Skills Gained</h3>
+                        <ul class="space-y-2 text-center">
+                            <li>Threat Analysis</li>
+                            <li>Encryption</li>
+                            <li>Network Security</li>
+                            <li>Incident Response</li>
+                            <li>Security Policies</li>
+                        </ul>
+                        <a href="../Certifications/R in data science.pdf"><button class="mt-6 px-4 py-2 bg-white text-green-500 rounded-full font-medium hover:bg-opacity-90 transition">
+                            View Certificate
+                        </button></a>
+                    </div>
+                </div>
+            </div>
+             <!-- Certificate 16 -->
+            <div class="certificate-card animate-slide-up project-card" style="animation-delay: 0.8s;" data-category="Data Science">
+                <div class="certificate-inner h-full">
+                    <div class="certificate-front h-full bg-gray-800 rounded-xl overflow-hidden shadow-2xl border border-gray-700 flex flex-col">
+                        <div class="relative overflow-hidden h-48">
+                            <div class="absolute inset-0 bg-gradient-to-br from-blue-400 to-indigo-600 opacity-70"></div>
+                            
+                            <div class="relative z-10 h-full flex items-center justify-center">
+                                <img src="../media/data science.png" alt="Security" class="h-40 object-cover">
+                            </div>
+                        </div>
+                        <div class="p-6 flex-grow">
+                            <span class="inline-block px-3 py-1 bg-blue-400/10 text-blue-400 text-xs font-semibold rounded-full mb-3">Security</span>
+                            <h3 class="text-xl font-bold mb-2">Power BI</h3>
+                            <p class="text-gray-400">Developed skills in identifying vulnerabilities and protecting systems from cyber threats.</p>
+                        </div>
+                        <div class="px-6 pb-6">
+                            <div class="flex items-center text-sm text-gray-400">
+                                <i class="fas fa-award mr-2 text-yellow-400"></i>
+                                <span>Issued: Simplilearn • Jan 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="certificate-back absolute inset-0 bg-gradient-to-br from-blue-400 to-indigo-600 rounded-xl p-6 flex flex-col items-center justify-center text-white">
+                        <h3 class="text-xl font-bold mb-4">Skills Gained</h3>
+                        <ul class="space-y-2 text-center">
+                            <li>Threat Analysis</li>
+                            <li>Encryption</li>
+                            <li>Network Security</li>
+                            <li>Incident Response</li>
+                            <li>Security Policies</li>
+                        </ul>
+                        <a href="../Certifications/Power bi.pdf"><button class="mt-6 px-4 py-2 bg-white text-green-500 rounded-full font-medium hover:bg-opacity-90 transition">
+                            View Certificate
+                        </button></a>
+                    </div>
+                </div>
+            </div>
+             <!-- Certificate 17 -->
+            <div class="certificate-card animate-slide-up project-card" style="animation-delay: 0.8s;" data-category="Programming">
+                <div class="certificate-inner h-full">
+                    <div class="certificate-front h-full bg-gray-800 rounded-xl overflow-hidden shadow-2xl border border-gray-700 flex flex-col">
+                        <div class="relative overflow-hidden h-48">
+                            <div class="absolute inset-0 bg-gradient-to-br from-blue-400 to-indigo-600 opacity-70"></div>
+                            
+                            <div class="relative z-10 h-full flex items-center justify-center">
+                                <img src="../media/coding.jpg" alt="Security" class="h-full  object-cover">
+                            </div>
+                        </div>
+                        <div class="p-6 flex-grow">
+                            <span class="inline-block px-3 py-1 bg-red-500/10 text-red-400 text-xs font-semibold rounded-full mb-3">Programming</span>
+                            <h3 class="text-xl font-bold mb-2">Springboot and Rest API</h3>
+                            <p class="text-gray-400">Developed skills in identifying vulnerabilities and protecting systems from cyber threats.</p>
+                        </div>
+                        <div class="px-6 pb-6">
+                            <div class="flex items-center text-sm text-gray-400">
+                                <i class="fas fa-award mr-2 text-yellow-400"></i>
+                                <span>Issued: Skillected • May 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="certificate-back absolute inset-0 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl p-6 flex flex-col items-center justify-center text-white">
+                        <h3 class="text-xl font-bold mb-4">Skills Gained</h3>
+                        <ul class="space-y-2 text-center">
+                            <li>Threat Analysis</li>
+                            <li>Encryption</li>
+                            <li>Network Security</li>
+                            <li>Incident Response</li>
+                            <li>Security Policies</li>
+                        </ul>
+                        <a href="../Certifications/springboot.png"><button class="mt-6 px-4 py-2 bg-white text-green-500 rounded-full font-medium hover:bg-opacity-90 transition">
+                            View Certificate
+                        </button></a>
+                    </div>
+                </div>
+            </div>
+             <!-- Certificate 18 -->
+            <div class="certificate-card animate-slide-up project-card project-card" style="animation-delay: 0.8s;" data-category="Security">
+                <div class="certificate-inner h-full">
+                    <div class="certificate-front h-full bg-gray-800 rounded-xl overflow-hidden shadow-2xl border border-gray-700 flex flex-col">
+                        <div class="relative overflow-hidden h-48">
+                            <div class="absolute inset-0 bg-gradient-to-br from-blue-400 to-indigo-600 opacity-70"></div>
+                            
+                            <div class="relative z-10 h-full flex items-center justify-center">
+                                <img src="../media/cybersecurity.jpg" alt="Security" class="h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="p-6 flex-grow">
+                            <span class="inline-block px-3 py-1 bg-blue-400/10 text-blue-400 text-xs font-semibold rounded-full mb-3">Security</span>
+                            <h3 class="text-xl font-bold mb-2">Phishing Attack</h3>
+                            <p class="text-gray-400">Developed skills in identifying vulnerabilities and protecting systems from cyber threats.</p>
+                        </div>
+                        <div class="px-6 pb-6">
+                            <div class="flex items-center text-sm text-gray-400">
+                                <i class="fas fa-award mr-2 text-yellow-400"></i>
+                                <span>Issued: NoviTech • Nov 2024</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="certificate-back absolute inset-0 bg-gradient-to-br from-blue-400 to-indigo-600 rounded-xl p-6 flex flex-col items-center justify-center text-white">
+                        <h3 class="text-xl font-bold mb-4">Skills Gained</h3>
+                        <ul class="space-y-2 text-center">
+                            <li>Threat Analysis</li>
+                            <li>Encryption</li>
+                            <li>Network Security</li>
+                            <li>Incident Response</li>
+                            <li>Security Policies</li>
+                        </ul>
+                        <a href="../Certifications/Phising attacks.pdf"><button class="mt-6 px-4 py-2 bg-white text-green-500 rounded-full font-medium hover:bg-opacity-90 transition">
+                            View Certificate
+                        </button></a>
+                    </div>
+                </div>
+            </div>
+             <!-- Certificate 19 -->
+            <div class="certificate-card animate-slide-up project-card" style="animation-delay: 0.8s;" data-category="Artificial Intelligence">
+                <div class="certificate-inner h-full">
+                    <div class="certificate-front h-full bg-gray-800 rounded-xl overflow-hidden shadow-2xl border border-gray-700 flex flex-col">
+                        <div class="relative overflow-hidden h-48">
+                            <div class="absolute inset-0 bg-gradient-to-br from-blue-400 to-indigo-600 opacity-70"></div>
+                            
+                            <div class="relative z-10 h-full flex items-center justify-center">
+                                <img src="../media/AI.jpg" alt="Security" class="h-full w-full object-cover">
+                            </div>
+                        </div>
+                        <div class="p-6 flex-grow">
+                            <span class="inline-block px-3 py-1 bg-blue-400/10 text-pink-300 text-xs font-semibold rounded-full mb-3">Artificial Intelligence</span>
+                            <h3 class="text-xl font-bold mb-2">Deep Learning</h3>
+                            <p class="text-gray-400">Developed skills in identifying vulnerabilities and protecting systems from cyber threats.</p>
+                        </div>
+                        <div class="px-6 pb-6">
+                            <div class="flex items-center text-sm text-gray-400">
+                                <i class="fas fa-award mr-2 text-yellow-400"></i>
+                                <span>Issued: Infosys • Jun 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="certificate-back absolute inset-0 bg-gradient-to-br from-blue-400 to-indigo-600 rounded-xl p-6 flex flex-col items-center justify-center text-white">
+                        <h3 class="text-xl font-bold mb-4">Skills Gained</h3>
+                        <ul class="space-y-2 text-center">
+                            <li>Threat Analysis</li>
+                            <li>Encryption</li>
+                            <li>Network Security</li>
+                            <li>Incident Response</li>
+                            <li>Security Policies</li>
+                        </ul>
+                        <a href="../Certifications/Deep learning.pdf"><button class="mt-6 px-4 py-2 bg-white text-green-500 rounded-full font-medium hover:bg-opacity-90 transition">
+                            View Certificate
+                        </button></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Certificate 20 -->
+            <div class="certificate-card animate-slide-up project-card"  style="animation-delay: 0.8s;"data-category="Programming">
+                <div class="certificate-inner h-full">
+                    <div class="certificate-front h-full bg-gray-800 rounded-xl overflow-hidden shadow-2xl border border-gray-700 flex flex-col">
+                        <div class="relative overflow-hidden h-48">
+                            <div class="absolute inset-0 bg-gradient-to-br from-blue-400 to-indigo-600 opacity-70"></div>
+                            
+                            <div class="relative z-10 h-full flex items-center justify-center">
+                                <img src="../media/coding.jpg" alt="Security" class="h-full  object-cover">
+                            </div>
+                        </div>
+                        <div class="p-6 flex-grow">
+                            <span class="inline-block px-3 py-1 bg-red-500/10 text-red-400 text-xs font-semibold rounded-full mb-3">Programming</span>
+                            <h3 class="text-xl font-bold mb-2">Data Structure Algorithm</h3>
+                            <p class="text-gray-400">Developed skills in identifying vulnerabilities and protecting systems from cyber threats.</p>
+                        </div>
+                        <div class="px-6 pb-6">
+                            <div class="flex items-center text-sm text-gray-400">
+                                <i class="fas fa-award mr-2 text-yellow-400"></i>
+                                <span>Issued: Scaler • Nov 2024</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="certificate-back absolute inset-0 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl p-6 flex flex-col items-center justify-center text-white">
+                        <h3 class="text-xl font-bold mb-4">Skills Gained</h3>
+                        <ul class="space-y-2 text-center">
+                            <li>Threat Analysis</li>
+                            <li>Encryption</li>
+                            <li>Network Security</li>
+                            <li>Incident Response</li>
+                            <li>Security Policies</li>
+                        </ul>
+                        <a href="../Certifications/DSA.png"><button class="mt-6 px-4 py-2 bg-white text-green-500 rounded-full font-medium hover:bg-opacity-90 transition">
+                            View Certificate
+                        </button></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Certificate 21-->
+            <div class="certificate-card animate-slide-up project-card" style="animation-delay: 0.8s;" data-category="Security">
+                <div class="certificate-inner h-full">
+                    <div class="certificate-front h-full bg-gray-800 rounded-xl overflow-hidden shadow-2xl border border-gray-700 flex flex-col">
+                        <div class="relative overflow-hidden h-48">
+                            <div class="absolute inset-0 bg-gradient-to-br from-blue-400 to-indigo-600 opacity-70"></div>
+                            
+                            <div class="relative z-10 h-full flex items-center justify-center">
+                               <img src="../media/cybersecurity.jpg" alt="Google Cloud" class="h-50 w-50 object-cover">
+                            </div>
+                        </div>
+                        <div class="p-6 flex-grow">
+                            <span class="inline-block px-3 py-1 bg-blue-400/10 text-blue-400 text-xs font-semibold rounded-full mb-3">Security</span>
+                            <h3 class="text-xl font-bold mb-2">Cybersecurity</h3>
+                            <p class="text-gray-400">Developed skills in identifying vulnerabilities and protecting systems from cyber threats.</p>
+                        </div>
+                        <div class="px-6 pb-6">
+                            <div class="flex items-center text-sm text-gray-400">
+                                <i class="fas fa-award mr-2 text-yellow-400"></i>
+                                <span>Issued: Microsoft and TATA Strive • Oct 2024</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="certificate-back absolute inset-0 bg-gradient-to-br from-green-500 to-blue-500 rounded-xl p-6 flex flex-col items-center justify-center text-white">
+                        <h3 class="text-xl font-bold mb-4">Skills Gained</h3>
+                        <ul class="space-y-2 text-center">
+                            <li>Threat Analysis</li>
+                            <li>Encryption</li>
+                            <li>Network Security</li>
+                            <li>Incident Response</li>
+                            <li>Security Policies</li>
+                        </ul>
+                        <a href="../Certifications/Cybersecurity Microsoft.pdf"><button class="mt-6 px-4 py-2 bg-white text-green-500 rounded-full font-medium hover:bg-opacity-90 transition">
+                            View Certificate
+                        </button></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Certificate 22 -->
+            <div class="certificate-card animate-slide-up project-card" style="animation-delay: 0.8s;" data-category="Web Development">
+                <div class="certificate-inner h-full">
+                    <div class="certificate-front h-full bg-gray-800 rounded-xl overflow-hidden shadow-2xl border border-gray-700 flex flex-col">
+                        <div class="relative overflow-hidden h-48">
+                            <div class="absolute inset-0 bg-gradient-to-br from-blue-400 to-indigo-600 opacity-70"></div>
+                            
+                            <div class="relative z-10 h-full flex items-center justify-center">
+                                <img src="../media/CSS3 HTML5.png" alt="Security" class="h-40 w-40 object-cover">
+                            </div>
+                        </div>
+                        <div class="p-6 flex-grow">
+                            <span class="inline-block px-3 py-1 bg-red-500/10 text-red-400 text-xs font-semibold rounded-full mb-3">Programming</span>
+                             <span class="inline-block px-3 py-1 bg-purple-500/10 text-purple-400 text-xs font-semibold rounded-full mb-3">Web Development</span>
+                            <h3 class="text-xl font-bold mb-2">HTML AND CSS </h3>
+                            <p class="text-gray-400">Developed skills in identifying vulnerabilities and protecting systems from cyber threats.</p>
+                        </div>
+                        <div class="px-6 pb-6">
+                            <div class="flex items-center text-sm text-gray-400">
+                                <i class="fas fa-award mr-2 text-yellow-400"></i>
+                                <span>Issued: Skillected • Dec 2024</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="certificate-back absolute inset-0 bg-gradient-to-br from-blue-400 to-indigo-600 rounded-xl p-6 flex flex-col items-center justify-center text-white">
+                        <h3 class="text-xl font-bold mb-4">Skills Gained</h3>
+                        <ul class="space-y-2 text-center">
+                            <li>Threat Analysis</li>
+                            <li>Encryption</li>
+                            <li>Network Security</li>
+                            <li>Incident Response</li>
+                            <li>Security Policies</li>
+                        </ul>
+                        <a href="../Certifications/HTML and CSS bootcamp.png"><button class="mt-6 px-4 py-2 bg-white text-green-500 rounded-full font-medium hover:bg-opacity-90 transition">
+                            View Certificate
+                        </button></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Certificate 23 -->
+            <div class="certificate-card animate-slide-up project-card" style="animation-delay: 0.8s;" data-category="Artificial Intelligence">
+                <div class="certificate-inner h-full">
+                    <div class="certificate-front h-full bg-gray-800 rounded-xl overflow-hidden shadow-2xl border border-gray-700 flex flex-col">
+                        <div class="relative overflow-hidden h-48">
+                            <div class="absolute inset-0 bg-gradient-to-br from-blue-400 to-indigo-600 opacity-70"></div>
+                            
+                            <div class="relative z-10 h-full flex items-center justify-center">
+                               <img src="../media/AI.jpg" alt="Security" class="h-full w-full object-cover">
+                            </div>
+                        </div>
+                        <div class="p-6 flex-grow">
+                            <span class="inline-block px-3 py-1 bg-blue-400/10 text-pink-300 text-xs font-semibold rounded-full mb-3">Artificial Intelligence</span>
+                            <h3 class="text-xl font-bold mb-2">Natural Language Processing</h3>
+                            <p class="text-gray-400">Developed skills in identifying vulnerabilities and protecting systems from cyber threats.</p>
+                        </div>
+                        <div class="px-6 pb-6">
+                            <div class="flex items-center text-sm text-gray-400">
+                                <i class="fas fa-award mr-2 text-yellow-400"></i>
+                                <span>Issued: Infosys • Jun 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="certificate-back absolute inset-0 bg-gradient-to-br from-blue-400 to-indigo-600 rounded-xl p-6 flex flex-col items-center justify-center text-white">
+                        <h3 class="text-xl font-bold mb-4">Skills Gained</h3>
+                        <ul class="space-y-2 text-center">
+                            <li>Threat Analysis</li>
+                            <li>Encryption</li>
+                            <li>Network Security</li>
+                            <li>Incident Response</li>
+                            <li>Security Policies</li>
+                        </ul>
+                        <a href="../Certifications/NLP.pdf"><button class="mt-6 px-4 py-2 bg-white text-green-500 rounded-full font-medium hover:bg-opacity-90 transition">
+                            View Certificate
+                        </button></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Certificate 24 -->
+            <div class="certificate-card animate-slide-up project-card" style="animation-delay: 0.8s;" data-category="Quiz">
+                <div class="certificate-inner h-full">
+                    <div class="certificate-front h-full bg-gray-800 rounded-xl overflow-hidden shadow-2xl border border-gray-700 flex flex-col">
+                        <div class="relative overflow-hidden h-48">
+                            <div class="absolute inset-0 bg-gradient-to-br from-blue-400 to-indigo-600 opacity-70"></div>
+                            
+                            <div class="relative z-10 h-full flex items-center justify-center">
+                                <img src="../media/flipkart.png" alt="Security" class="h-full w-full object-cover">
+                            </div>
+                        </div>
+                        <div class="p-6 flex-grow">
+                            <span class="inline-block px-3 py-1 bg-yellow-500/10 text-yellow-400 text-xs font-semibold rounded-full mb-3">Quiz</span>
+                            <h3 class="text-xl font-bold mb-2">Flipkart Grid 6.0</h3>
+                            <p class="text-gray-400">Developed skills in identifying vulnerabilities and protecting systems from cyber threats.</p>
+                        </div>
+                        <div class="px-6 pb-6">
+                            <div class="flex items-center text-sm text-gray-400">
+                                <i class="fas fa-award mr-2 text-yellow-400"></i>
+                                <span>Issued: Flipkart • 2024</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="certificate-back absolute inset-0 bg-gradient-to-br from-blue-400 to-indigo-600 rounded-xl p-6 flex flex-col items-center justify-center text-white">
+                        <h3 class="text-xl font-bold mb-4">Skills Gained</h3>
+                        <ul class="space-y-2 text-center">
+                            <li>Threat Analysis</li>
+                            <li>Encryption</li>
+                            <li>Network Security</li>
+                            <li>Incident Response</li>
+                            <li>Security Policies</li>
+                        </ul>
+                        <a href="../Certifications/Flipkart Grid 6.0 img.jpg"><button class="mt-6 px-4 py-2 bg-white text-green-500 rounded-full font-medium hover:bg-opacity-90 transition">
+                            View Certificate
+                        </button></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Certificate 25 -->
+            <div class="certificate-card animate-slide-up project-card" style="animation-delay: 0.8s;"data-category="Quiz">
+                <div class="certificate-inner h-full">
+                    <div class="certificate-front h-full bg-gray-800 rounded-xl overflow-hidden shadow-2xl border border-gray-700 flex flex-col">
+                        <div class="relative overflow-hidden h-48">
+                            <div class="absolute inset-0 bg-gradient-to-br from-blue-400 to-indigo-600 opacity-70"></div>
+                            
+                            <div class="relative z-10 h-full flex items-center justify-center">
+                                 <img src="../media/TATA.jpg" alt="Security" class="h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="p-6 flex-grow">
+                            <span class="inline-block px-3 py-1 bg-yellow-500/10 text-yellow-400 text-xs font-semibold rounded-full mb-3">Quiz</span>
+                            <h3 class="text-xl font-bold mb-2">TATA Imagination Challenging</h3>
+                            <p class="text-gray-400">Developed skills in identifying vulnerabilities and protecting systems from cyber threats.</p>
+                        </div>
+                        <div class="px-6 pb-6">
+                            <div class="flex items-center text-sm text-gray-400">
+                                <i class="fas fa-award mr-2 text-yellow-400"></i>
+                                <span>Issued: TATA • 2024</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="certificate-back absolute inset-0 bg-gradient-to-br from-blue-400 to-indigo-600 rounded-xl p-6 flex flex-col items-center justify-center text-white">
+                        <h3 class="text-xl font-bold mb-4">Skills Gained</h3>
+                        <ul class="space-y-2 text-center">
+                            <li>Threat Analysis</li>
+                            <li>Encryption</li>
+                            <li>Network Security</li>
+                            <li>Incident Response</li>
+                            <li>Security Policies</li>
+                        </ul>
+                        <a href="../Certifications/TATA imagination Challangejpg.jpg"><button class="mt-6 px-4 py-2 bg-white text-green-500 rounded-full font-medium hover:bg-opacity-90 transition">
+                            View Certificate
+                        </button></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Certificate 26 -->
+            <div class="certificate-card animate-slide-up project-card" style="animation-delay: 0.8s;" data-category="Web Development">
+                <div class="certificate-inner h-full">
+                    <div class="certificate-front h-full bg-gray-800 rounded-xl overflow-hidden shadow-2xl border border-gray-700 flex flex-col">
+                        <div class="relative overflow-hidden h-48">
+                            <div class="absolute inset-0 bg-gradient-to-br from-blue-400 to-indigo-600 opacity-70"></div>
+                            
+                            <div class="relative z-10 h-full flex items-center justify-center">
+                                 <img src="../media/web.png" alt="web" class="h-full w-full object-cover">
+                            </div>
+                        </div>
+                        <div class="p-6 flex-grow">
+                             <span class="inline-block px-3 py-1 bg-purple-500/10 text-purple-400 text-xs font-semibold rounded-full mb-3">Web Development</span>
+                            <h3 class="text-xl font-bold mb-2">Full Stack Web Development using AI</h3>
+                            <p class="text-gray-400">Developed skills in identifying vulnerabilities and protecting systems from cyber threats.</p>
+                        </div>
+                        <div class="px-6 pb-6">
+                            <div class="flex items-center text-sm text-gray-400">
+                                <i class="fas fa-award mr-2 text-yellow-400"></i>
+                                <span>Issued: Hifi11 Technologies • jun 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="certificate-back absolute inset-0 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl p-6 flex flex-col items-center justify-center text-white">
+                        <h3 class="text-xl font-bold mb-4">Skills Gained</h3>
+                        <ul class="space-y-2 text-center">
+                            <li>Threat Analysis</li>
+                            <li>Encryption</li>
+                            <li>Network Security</li>
+                            <li>Incident Response</li>
+                            <li>Security Policies</li>
+                        </ul>
+                        <a href="../Certifications/SHRUTHI MEENAKSHI M.png"><button class="mt-6 px-4 py-2 bg-white text-green-500 rounded-full font-medium hover:bg-opacity-90 transition">
+                            View Certificate
+                        </button></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Certificate 27 -->
+            <div class="certificate-card animate-slide-up project-card" style="animation-delay: 0.8s;" data-category="Quiz">
+                <div class="certificate-inner h-full">
+                    <div class="certificate-front h-full bg-gray-800 rounded-xl overflow-hidden shadow-2xl border border-gray-700 flex flex-col">
+                        <div class="relative overflow-hidden h-48">
+                            <div class="absolute inset-0 bg-gradient-to-br from-blue-400 to-indigo-600 opacity-70"></div>
+                            
+                            <div class="relative z-10 h-full flex items-center justify-center">
+                                <img src="../media/quiz.jpg" alt="Security" class="h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="p-6 flex-grow">
+                            <span class="inline-block px-3 py-1 bg-yellow-500/10 text-yellow-400 text-xs font-semibold rounded-full mb-3">Quiz</span>
+                            <h3 class="text-xl font-bold mb-2">Sudar Award</h3>
+                            <p class="text-gray-400">Developed skills in identifying vulnerabilities and protecting systems from cyber threats.</p>
+                        </div>
+                        <div class="px-6 pb-6">
+                            <div class="flex items-center text-sm text-gray-400">
+                                <i class="fas fa-award mr-2 text-yellow-400"></i>
+                                <span>Issued: Yaavarum Kelir • Jan 2021</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="certificate-back absolute inset-0 bg-gradient-to-br from-green-500 to-blue-500 rounded-xl p-6 flex flex-col items-center justify-center text-white">
+                        <h3 class="text-xl font-bold mb-4">Skills Gained</h3>
+                        <ul class="space-y-2 text-center">
+                            <li>Threat Analysis</li>
+                            <li>Encryption</li>
+                            <li>Network Security</li>
+                            <li>Incident Response</li>
+                            <li>Security Policies</li>
+                        </ul>
+                        <a href="../Certifications/Award.pdf"><button class="mt-6 px-4 py-2 bg-white text-green-500 rounded-full font-medium hover:bg-opacity-90 transition">
+                            View Certificate
+                        </button></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Certificate 28 -->
+            <div class="certificate-card animate-slide-up project-card" style="animation-delay: 0.8s;" data-category="Security">
+                <div class="certificate-inner h-full">
+                    <div class="certificate-front h-full bg-gray-800 rounded-xl overflow-hidden shadow-2xl border border-gray-700 flex flex-col">
+                        <div class="relative overflow-hidden h-48">
+                            <div class="absolute inset-0 bg-gradient-to-br from-blue-400 to-indigo-600 opacity-70"></div>
+                            
+                            <div class="relative z-10 h-full flex items-center justify-center">
+                                <img src="../media/cybersecurity.jpg" alt="Google Cloud" class="h-50 w-50 object-cover">
+                            </div>
+                        </div>
+                        <div class="p-6 flex-grow">
+                            <span class="inline-block px-3 py-1 bg-blue-400/10 text-blue-400 text-xs font-semibold rounded-full mb-3">Security</span>
+                            <h3 class="text-xl font-bold mb-2">Cybersecurity</h3>
+                            <p class="text-gray-400">Developed skills in identifying vulnerabilities and protecting systems from cyber threats.</p>
+                        </div>
+                        <div class="px-6 pb-6">
+                            <div class="flex items-center text-sm text-gray-400">
+                                <i class="fas fa-award mr-2 text-yellow-400"></i>
+                                <span>Issued: Simplilearn • Nov 2024</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="certificate-back absolute inset-0 bg-gradient-to-br from-blue-400 to-indigo-600 rounded-xl p-6 flex flex-col items-center justify-center text-white">
+                        <h3 class="text-xl font-bold mb-4">Skills Gained</h3>
+                        <ul class="space-y-2 text-center">
+                            <li>Threat Analysis</li>
+                            <li>Encryption</li>
+                            <li>Network Security</li>
+                            <li>Incident Response</li>
+                            <li>Security Policies</li>
+                        </ul>
+                        <a href="../Certifications/Cybersecurity.pdf"><button class="mt-6 px-4 py-2 bg-white text-green-500 rounded-full font-medium hover:bg-opacity-90 transition">
+                            View Certificate
+                        </button></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Certificate 29 -->
+            <div class="certificate-card animate-slide-up project-card" style="animation-delay: 0.8s;" data-category="Quiz">
+                <div class="certificate-inner h-full">
+                    <div class="certificate-front h-full bg-gray-800 rounded-xl overflow-hidden shadow-2xl border border-gray-700 flex flex-col">
+                        <div class="relative overflow-hidden h-48">
+                            <div class="absolute inset-0 bg-gradient-to-br from-blue-400 to-indigo-600 opacity-70"></div>
+                            
+                            <div class="relative z-10 h-full flex items-center justify-center">
+                                <img src="../media/TATA.jpg" alt="Security" class="h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="p-6 flex-grow">
+                            <span class="inline-block px-3 py-1 bg-yellow-500/10 text-yellow-400 text-xs font-semibold rounded-full mb-3">Quiz</span>
+                            <h3 class="text-xl font-bold mb-2">TATA Crucible Campus</h3>
+                            <p class="text-gray-400">Developed skills in identifying vulnerabilities and protecting systems from cyber threats.</p>
+                        </div>
+                        <div class="px-6 pb-6">
+                            <div class="flex items-center text-sm text-gray-400">
+                                <i class="fas fa-award mr-2 text-yellow-400"></i>
+                                <span>Issued: TATA • 2024</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="certificate-back absolute inset-0 bg-gradient-to-br from-blue-400 to-indigo-600 rounded-xl p-6 flex flex-col items-center justify-center text-white">
+                        <h3 class="text-xl font-bold mb-4">Skills Gained</h3>
+                        <ul class="space-y-2 text-center">
+                            <li>Threat Analysis</li>
+                            <li>Encryption</li>
+                            <li>Network Security</li>
+                            <li>Incident Response</li>
+                            <li>Security Policies</li>
+                        </ul>
+                        <a href="../Certifications/TATA Crucible Campus.jpg"><button class="mt-6 px-4 py-2 bg-white text-green-500 rounded-full font-medium hover:bg-opacity-90 transition">
+                            View Certificate
+                        </button></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Certificate 30 -->
+            <div class="certificate-card animate-slide-up project-card" style="animation-delay: 0.8s;" data-category="Artificial Intelligence">
+                <div class="certificate-inner h-full">
+                    <div class="certificate-front h-full bg-gray-800 rounded-xl overflow-hidden shadow-2xl border border-gray-700 flex flex-col">
+                        <div class="relative overflow-hidden h-48">
+                            <div class="absolute inset-0 bg-gradient-to-br from-blue-400 to-indigo-600 opacity-70"></div>
+                            
+                            <div class="relative z-10 h-full flex items-center justify-center">
+                                <img src="../media/AI.jpg" alt="Security" class="h-full w-full object-cover">
+                            </div>
+                        </div>
+                        <div class="p-6 flex-grow">
+                            <span class="inline-block px-3 py-1 bg-blue-400/10 text-pink-300 text-xs font-semibold rounded-full mb-3">Artificial Intelligence</span>
+                            <h3 class="text-xl font-bold mb-2">OpenAI GPT Models</h3>
+                            <p class="text-gray-400">Developed skills in identifying vulnerabilities and protecting systems from cyber threats.</p>
+                        </div>
+                        <div class="px-6 pb-6">
+                            <div class="flex items-center text-sm text-gray-400">
+                                <i class="fas fa-award mr-2 text-yellow-400"></i>
+                                <span>Issued: Infosys • Jun 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="certificate-back absolute inset-0 bg-gradient-to-br from-blue-400 to-indigo-600 rounded-xl p-6 flex flex-col items-center justify-center text-white">
+                        <h3 class="text-xl font-bold mb-4">Skills Gained</h3>
+                        <ul class="space-y-2 text-center">
+                            <li>Threat Analysis</li>
+                            <li>Encryption</li>
+                            <li>Network Security</li>
+                            <li>Incident Response</li>
+                            <li>Security Policies</li>
+                        </ul>
+                        <a href="../Certifications/OpenAI GPT models.pdf"><button class="mt-6 px-4 py-2 bg-white text-green-500 rounded-full font-medium hover:bg-opacity-90 transition">
+                            View Certificate
+                        </button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-buttons button');
+            const projectCards = document.querySelectorAll('.project-card');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const filter = this.dataset.filter; // Get the filter category from data-filter attribute
+
+                    // Remove active styles from all buttons
+                    filterButtons.forEach(btn => {
+                        btn.classList.remove('bg-primary', 'text-white', 'font-medium');
+                        btn.classList.add('bg-dark', 'border', 'border-gray-700', 'hover:bg-gray-800');
+                    });
+
+                    // Add active styles to the clicked button
+                    this.classList.remove('bg-dark', 'border', 'border-gray-700', 'hover:bg-gray-800');
+                    this.classList.add('bg-primary', 'text-white', 'font-medium');
+
+                    projectCards.forEach(card => {
+                        const cardCategory = card.dataset.category;
+
+                        if (filter === 'All' || cardCategory === filter) {
+                            card.classList.remove('hidden');
+                        } else {
+                            card.classList.add('hidden');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+
+
+        <!-- Call to Action -->
+        <div class="mt-20 text-center bg-grid rounded-2xl p-12 border border-gray-800 animate-fade-in" style="animation-delay: 0.9s;">
+            <h2 class="text-3xl font-bold mb-4">Ready to leverage my certified skills?</h2>
+            <p class="text-xl text-gray-300 max-w-2xl mx-auto mb-8">
+                I bring verified expertise to solve complex challenges and deliver exceptional results.
+            </p>
+           <a href="../home.html#Hireform"> <button class="px-8 py-4 bg-gradient-to-r from-primary to-secondary rounded-full font-bold text-white hover:opacity-90 transition-all transform hover:scale-105 shadow-lg">
+                Get In Touch
+            </button></a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900/50 border-t border-gray-800 py-12 mt-20">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-2xl font-bold gradient-text">Shruthi Meenakshi</h3>
+                    <p class="text-gray-400 mt-2">Full stack Developer</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition text-xl">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition text-xl">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition text-xl">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition text-xl">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500 text-sm">
+                <p>© 2025 All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple animation trigger on scroll
+        document.addEventListener('DOMContentLoaded', () => {
+            const animateOnScroll = () => {
+                const elements = document.querySelectorAll('.animate-slide-up, .animate-fade-in');
+                
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+                    
+                    if (elementPosition < windowHeight - 100) {
+                        element.style.opacity = '1';
+                        element.style.transform = 'translateY(0)';
+                    }
+                });
+            };
+            
+            // Initial check
+            animateOnScroll();
+            
+            // Check on scroll
+            window.addEventListener('scroll', animateOnScroll);
+        });
+    </script>
+</body>
+</html>
