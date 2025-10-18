@@ -527,6 +527,10 @@
         .back-content {
             flex: 1;
         }
+        .dark .btn-view{
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+        }
         
         .back-content h3 {
             font-size: 1.25rem;
