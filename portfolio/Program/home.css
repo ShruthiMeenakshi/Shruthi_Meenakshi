@@ -598,68 +598,150 @@ i.ri-arrow-right-s-line {
   font-size: 20px;
 }
 
-.inputform {
-  display: grid;
-  grid-template-columns: 50% 38%;
-  grid-template-rows: 41% 41%;
-}
-
-.contactform {
-  margin: 80px 0px 0px 170px;
-  height: 600px;
-}
-
-.input {
-  padding: 10px;
-  width: 250px;
-  border-radius: 5px;
-  border-color: #15282b;
-  color: black;
-  background-color: #e5e7f4;
-  outline-color: #79ddeb;
-  outline-style: inset;
-  border-style: none;
-}
-
-.textinput {
-  padding: 10px;
-  height: 150px;
-  width: 350px;
-  border-radius: 5px;
-  border: 2px ridge;
-  border-color: #ff00a2;
-  color: black;
-  background-color: #ffcceb;
-  outline-color: #f805a7;
-}
-
-.submitbtn {
-  margin-top: 80px;
-}
-
-.btcontact {
-  border: none;
-  width: 125px;
-  height: 40px;
-  background: rgb(76, 33, 251);
-  box-shadow: 2px 2px 4px #000000;
-  color: #fff;
-  border-radius: 5px;
-  margin-top: 30px;
-  padding: 10px 25px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-weight: 500;
-  cursor: pointer;
-  transition: 0.3s ease;
-
-}
-
-.btcontact:hover {
-  background: rgb(13, 223, 255);
-  box-shadow: 4px 4px 6px #8191fc;
-  color: #080320;
-}
-
+.experience-container {
+            width: 721.93px;
+            height: 600px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            padding: 20px 30px;
+            text-align: center;
+            flex-shrink: 0;
+        }
+        
+        .header h1 {
+            font-size: 1.6rem;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+        
+        .header p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 20px;
+            overflow-y: auto;
+            flex-grow: 1;
+        }
+        
+        .experience-item {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 18px;
+            margin-bottom: 15px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.03);
+            border-left: 4px solid #2575fc;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .experience-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+        
+        .experience-item.current {
+            border-left-color: #28a745;
+        }
+        
+        .company-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 8px;
+        }
+        
+        .company {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #2575fc;
+        }
+        
+        .duration {
+            background: #e9ecef;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: #6c757d;
+            white-space: nowrap;
+            margin-left: 10px;
+        }
+        
+        .role {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #495057;
+            margin-bottom: 10px;
+        }
+        
+        .description {
+            color: #6c757d;
+            font-size: 0.9rem;
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+        
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 8px;
+        }
+        
+        .skill-tag {
+            background: #e7f1ff;
+            color: #2575fc;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .achievement {
+            background: #fff3cd;
+            border-left: 3px solid #ffc107;
+            padding: 8px 12px;
+            margin-top: 8px;
+            border-radius: 0 4px 4px 0;
+            font-size: 0.85rem;
+        }
+        
+        .current .company {
+            color: #28a745;
+        }
+        
+        .current .skill-tag {
+            background: #e8f5e9;
+            color: #28a745;
+        }
+        
+        /* Custom scrollbar */
+        .content::-webkit-scrollbar {
+            width: 6px;
+        }
+        
+        .content::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        
+        .content::-webkit-scrollbar-thumb {
+            background: #c1c1c1;
+            border-radius: 10px;
+        }
+        
+        .content::-webkit-scrollbar-thumb:hover {
+            background: #a8a8a8;
+        }
 footer{
   background-color: #080320;
   color:white;
