@@ -688,6 +688,7 @@ i.ri-arrow-right-s-line {
             font-size: 0.9rem;
             margin-bottom: 12px;
             line-height: 1.5;
+            text-align: justify;
         }
         
         .skills {
