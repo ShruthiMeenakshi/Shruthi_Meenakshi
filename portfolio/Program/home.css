@@ -698,14 +698,36 @@ i.ri-arrow-right-s-line {
             margin-bottom: 8px;
         }
         
-        .skill-tag {
-            background: #e7f1ff;
-            color: #2575fc;
-            padding: 4px 10px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 500;
-        }
+    .skill-tag {
+      background: #e7f1ff;
+      color: #2575fc;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    .skill-animate {
+      animation: skillColor 1s ease-in-out infinite alternate;
+      text-decoration: none;
+    }
+
+    @keyframes skillColor {
+      0% {
+        color: #ff00d4; 
+      }
+      100% {
+        color: #ff0a0a; 
+      }
+    }
+
+    /* Respect user preference for reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      .skill-animate {
+        animation: none;
+        transition: color 0.3s ease;
+      }
+    }
         
         .achievement {
             background: #fff3cd;
