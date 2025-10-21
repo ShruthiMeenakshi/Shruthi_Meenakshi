@@ -43,9 +43,7 @@
         .certificate-card {
             perspective: 1000px;
             transform-style: preserve-3d;
-        }
-        .certificate-card:hover .certificate-inner {
-            transform: rotateY(180deg);
+            cursor: pointer;
         }
         .certificate-inner {
             transition: transform 0.8s;
@@ -56,6 +54,9 @@
             -webkit-backface-visibility: hidden;
         }
         .certificate-back {
+            transform: rotateY(180deg);
+        }
+        .certificate-card.flipped .certificate-inner {
             transform: rotateY(180deg);
         }
         .gradient-text {
@@ -1345,6 +1346,18 @@
                     });
                 });
             });
+            
+            // Add click event listeners to certificate cards for flipping
+            const certificateCards = document.querySelectorAll('.certificate-card');
+            certificateCards.forEach(card => {
+                card.addEventListener('click', function(e) {
+                    // Don't flip if the click is on a link or button
+                    if (e.target.tagName === 'A' || e.target.tagName === 'BUTTON' || e.target.closest('a') || e.target.closest('button')) {
+                        return;
+                    }
+                    this.classList.toggle('flipped');
+                });
+            });
         });
     </script>
 
@@ -1415,4 +1428,3 @@
     </script>
 </body>
 </html>
-

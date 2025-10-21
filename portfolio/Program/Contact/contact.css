@@ -44,11 +44,7 @@ transition: 0.3s;
 }
 
 .navbar a:hover {
-background-color: #00fbff;
-border-radius: 50px;
 color:#080f34;
-padding:10px;
-width:150px;
 }
 
 #menu-icon {
