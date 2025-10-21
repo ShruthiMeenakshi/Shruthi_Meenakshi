@@ -20,6 +20,7 @@
                         'float': 'float 6s ease-in-out infinite',
                         'fade-in': 'fadeIn 1s ease-in',
                         'slide-up': 'slideUp 0.8s ease-out',
+                        'colorchange': 'colorchange 2s ease-in-out infinite alternate',
                     },
                     keyframes: {
                         float: {
@@ -33,6 +34,11 @@
                         slideUp: {
                             '0%': { transform: 'translateY(50px)', opacity: '0' },
                             '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        colorchange: {
+                            '0%': { color: '#FFB6C1' }, 
+                            '50%': { color: '#8B0000' }, 
+                            '100%': { color: '#00FF00' },
                         }
                     }
                 }
@@ -151,7 +157,7 @@
                 window.location.href ="../Contact/contact.html";
             }
         </script>
-
+        <p class="text-center mb-12 animate-colorchange text-blue-500">Click Card to View Certificate</p>
         <!-- Filter Controls -->
         <div class="mb-12 flex flex-wrap justify-center gap-4 animate-slide-up filter-buttons" style="animation-delay: 0.2s;">
             <button class="px-4 py-2 bg-primary rounded-full text-white font-medium" data-filter="All">All</button>
