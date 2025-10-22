@@ -550,7 +550,7 @@
                         <h2 class="category-heading">Web Development Projects</h2>
                         <div class="project-grid">
                             <!-- E-Commerce Platform -->
-                            <div class="project-card">
+                            <div class="project-card" onclick="toggleFlip(this)">
                                 <div class="flip-card-inner">
                                     <div class="flip-card-front">
                                         <div class="front-header-icon gradient-1"></div>
@@ -584,7 +584,7 @@
                             </div>
 
                             <!-- Data Visualization Dashboard -->
-                            <div class="project-card">
+                            <div class="project-card" onclick="toggleFlip(this)">
                                 <div class="flip-card-inner">
                                     <div class="flip-card-front">
                                         <div class="front-header-icon gradient-2"></div>
@@ -618,7 +618,7 @@
                             </div>
 
                             <!-- Real-time Chat App -->
-                            <div class="project-card">
+                            <div class="project-card" onclick="toggleFlip(this)">
                                 <div class="flip-card-inner">
                                     <div class="flip-card-front">
                                         <div class="front-header-icon gradient-3"></div>
@@ -652,7 +652,7 @@
                             </div>
 
                             <!-- College Website -->
-                            <div class="project-card">
+                            <div class="project-card" onclick="toggleFlip(this)">
                                 <div class="flip-card-inner">
                                     <div class="flip-card-front">
                                         <div class="front-header-icon gradient-4">
@@ -689,7 +689,7 @@
                             </div>
 
                             <!-- Amazon Clone -->
-                            <div class="project-card">
+                            <div class="project-card" onclick="toggleFlip(this)">
                                 <div class="flip-card-inner">
                                     <div class="flip-card-front">
                                         <div class="front-header-icon gradient-14"></div>
@@ -721,7 +721,7 @@
                                 </div>
                             </div>
                             <!--Landing page-->
-                            <div class="project-card">
+                            <div class="project-card" onclick="toggleFlip(this)">
                                 <div class="flip-card-inner">
                                     <div class="flip-card-front">
                                         <div class="front-header-icon gradient-6"></div>
@@ -760,7 +760,7 @@
                         <h2 class="category-heading">Artificial Intelligence Projects</h2>
                         <div class="project-grid">
                             <!-- YOLOv8 vs YOLOv11 -->
-                            <div class="project-card">
+                            <div class="project-card" onclick="toggleFlip(this)">
                                 <div class="flip-card-inner">
                                     <div class="flip-card-front">
                                         <div class="front-header-icon gradient-7"></div>
@@ -799,7 +799,7 @@
                         <h2 class="category-heading">Mobile App Development Projects</h2>
                         <div class="project-grid">
                             <!-- Greetings App -->
-                            <div class="project-card">
+                            <div class="project-card" onclick="toggleFlip(this)">
                                 <div class="flip-card-inner">
                                     <div class="flip-card-front">
                                         <div class="front-header-icon gradient-8"></div>
@@ -832,7 +832,7 @@
                             </div>
 
                             <!-- Hello World App -->
-                            <div class="project-card">
+                            <div class="project-card" onclick="toggleFlip(this)">
                                 <div class="flip-card-inner">
                                     <div class="flip-card-front">
                                         <div class="front-header-icon gradient-9"></div>
@@ -871,7 +871,7 @@
                         <h2 class="category-heading">Blender Models & Animations Projects</h2>
                         <div class="project-grid">
                             <!-- Solar System Animation -->
-                            <div class="project-card">
+                            <div class="project-card" onclick="toggleFlip(this)">
                                 <div class="flip-card-inner">
                                     <div class="flip-card-front">
                                         <div class="front-header-icon gradient-10">
@@ -908,7 +908,7 @@
                             </div>
 
                             <!-- Static Solar System Model -->
-                            <div class="project-card">
+                            <div class="project-card" onclick="toggleFlip(this)">
                                 <div class="flip-card-inner">
                                     <div class="flip-card-front">
                                         <div class="front-header-icon gradient-11"></div>
@@ -941,7 +941,7 @@
                             </div>
 
                             <!-- Model of Die -->
-                            <div class="project-card">
+                            <div class="project-card" onclick="toggleFlip(this)">
                                 <div class="flip-card-inner">
                                     <div class="flip-card-front">
                                         <div class="front-header-icon gradient-12"></div>
@@ -973,7 +973,7 @@
                                 </div>
                             </div>
                             <!--Model of a Sofa -->
-                            <div class="project-card">
+                            <div class="project-card" onclick="toggleFlip(this)">
                                 <div class="flip-card-inner">
                                     <div class="flip-card-front">
                                         <div class="front-header-icon gradient-13"></div>
@@ -1132,6 +1132,11 @@
                 }, 100);
             });
         }
+        // Function to FLIP
+function toggleFlip(card) {
+    const inner = card.querySelector('.flip-card-inner');
+    inner.classList.toggle('flipped');
+}
         
         // Intersection Observer for animations
         const observer = new IntersectionObserver((entries) => {
