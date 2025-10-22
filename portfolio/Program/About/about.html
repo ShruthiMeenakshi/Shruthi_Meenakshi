@@ -16,7 +16,6 @@
                         secondary: 'rgb(4, 13, 83)',
                         dark: '#1a1a2e',
                         light: '#f8f9fa',
-                        // Light theme colors
                         lightPrimary: '#2563eb',
                         lightSecondary: '#1e40af',
                         lightBg: '#f8fafc',
@@ -49,6 +48,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" href="Program/media/S.png" type="image/x-icon">
     <link rel="stylesheet" href="about.css">
+        <style>
+        /* GIF text-fill utility (uses background-clip to fill text with a GIF) */
+        .gif-text {
+            background-image: url('https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif');
+            background-size: cover;
+            color: transparent;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            display: inline-block;
+            line-height: 1;
+        }
+        @media (max-width: 768px) {
+            .gif-text { font-size: 1.2rem; }
+        }
+        </style>
 </head>
 
 <body class="antialiased bg-gray-50 text-gray-800 dark:bg-dark dark:text-light transition-colors duration-300">
@@ -93,7 +108,7 @@
         <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
             <div class="md:w-1/2 mb-12 md:mb-0 animate__animated animate__fadeInLeft">
                 <p class="text-lg text-gray-600 dark:text-gray-300 mb-2">Welcome to my About page</p>
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Hi! I'm <span class="text-primary">Shruthi Meenakshi</span></h1>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Hi! I'm <span class="gif-text">Shruthi Meenakshi</span></h1>
                 <div class="flex flex-wrap gap-4 mb-8">
                     <span class="px-4 py-2 bg-purple-100 dark:bg-purple-900 text-purple-600 dark:text-purple-300 rounded-full font-medium">Cybersecurity Analyst</span>
                     <span class="px-4 py-2 bg-primary/10 text-primary rounded-full font-medium">App Developer</span>
