@@ -27,6 +27,7 @@
                         'fade-in': 'fadeIn 1s ease-in-out',
                         'slide-up': 'slideUp 0.8s ease-out',
                         'pulse-slow': 'pulse 3s infinite',
+                        'colorchange': 'colorchange 2s ease-in-out infinite alternate',
                     },
                     keyframes: {
                         fadeIn: {
@@ -37,6 +38,11 @@
                             '0%': { transform: 'translateY(20px)', opacity: '0' },
                             '100%': { transform: 'translateY(0)', opacity: '1' },
                         },
+                        colorchange: {
+                            '0%': { color: '#FFF700' },  
+                            '50%': { color: '#006400' },
+                            '100%': { color: '#FF0000' },
+                        }
                     }
                 }
             }
@@ -104,7 +110,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="pt-32 pb-16 px-6">
+    <section class="pt-28 pb-16 px-6">
         <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
             <div class="md:w-1/2 mb-12 md:mb-0 animate__animated animate__fadeInLeft">
                 <p class="text-lg text-gray-600 dark:text-gray-300 mb-2">Welcome to my About page</p>
@@ -542,7 +548,7 @@
                     <i class="fas fa-chevron-right"></i>
                 </button>
             </div>
-            
+            <p class="text-center text-lg animate-colorchange">Click the Cards to know more...</p>
             <div class="category-carousel-wrapper">
                 <div class="category-carousel-track" id="categoryCarouselTrack">
                     <!-- Web Development Projects -->
