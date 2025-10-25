@@ -370,30 +370,39 @@ li.nav-link a {
 
 .threepic {
   display: grid;
-  grid-template-columns: 34% 35% 35%;
+  /* use flexible equal columns so items don't overlap on different viewports */
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   justify-items: center;
   padding-top: 60px;
-  padding-right: 80px;
   gap: 1rem;
 }
 
 .columnpic {
-  height: 70px;
-  width: 80px;
-  border-radius: 34px;
+  /* let the grid cell control sizing; make card responsive */
+  width: 100%;
+  max-width: 360px;
+  border-radius: 16px;
   border: none;
-  padding: 150px;
+  padding: 0.75rem;
+  box-sizing: border-box;
   background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
 
 .pic1,
 .pic2,
 .pic3 {
-  height: 193px;
-  width: 316px;
-  margin: -133px 0px 0px -136px;
-  padding: 18px;
-  border-radius: 17px;
+  /* full width card image area — avoid negative margins which cause overlap */
+  height: 200px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border-radius: 12px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .pic1 {
@@ -419,9 +428,10 @@ li.nav-link a {
 
 .bigpicname {
   display: grid;
-  grid-template-columns: 75% 25%;
-  width: 330px;
-  margin: 0px -127px;
+  grid-template-columns: 1fr auto;
+  width: 100%;
+  max-width: 330px;
+  margin: 0.5rem 0 0 0;
 }
 
 .picname {
@@ -975,24 +985,26 @@ footer{
         padding: 0rem 0rem 0rem 0rem;
   }
   .columnpic {
-    height: 4rem;
-    width: 4rem;
-    border-radius: 34px;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 12px;
     border: none;
-    padding: 7rem;
+    padding: 0.75rem;
     background-color: white;
     display: flex;
     flex-direction: column;
-    margin-left: -1rem;
-}
+    margin-left: 0;
+    box-sizing: border-box;
+  }
   .pic1, .pic2, .pic3 {
-    height: 100%;
+    height: 180px;
     width: 100%;
-    padding: 6rem 12rem 3rem 0rem;
-    margin: -91px 0px 0px -136px;
-    border-radius: 17px;
-    margin-left: -6rem;
-}
+    padding: 0.5rem 0.5rem 0 0.5rem;
+    margin: 0;
+    border-radius: 12px;
+    background-size: cover;
+    background-position: center;
+  }
 .bigpicname {
     display: grid;
     grid-template-columns: 60% 24%;
