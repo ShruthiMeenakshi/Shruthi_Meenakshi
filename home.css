@@ -372,8 +372,9 @@ li.nav-link a {
   display: grid;
   grid-template-columns: 34% 35% 35%;
   justify-items: center;
-  margin-top: 60px;
-  margin-right: 80px;
+  padding-top: 60px;
+  padding-right: 80px;
+  gap: 1rem;
 }
 
 .columnpic {
