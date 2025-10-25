@@ -474,8 +474,9 @@ i.ri-arrow-right-s-line {
 */
 .profile {
   display: grid;
-  grid-template-columns: 67% 40%;
+  grid-template-columns: 71% 33%;
   gap: 20px;
+  justify-content: center;
 }
 
 .myintro {
