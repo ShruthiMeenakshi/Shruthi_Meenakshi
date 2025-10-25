@@ -16,11 +16,11 @@ I’ve managed and contributed to multiple team projects — from building SaaS 
 ### 🧾 GST Invoice Billing SaaS
 - A cloud-based invoicing software developed with a team.
 - My role: **Project Manager & Full Stack Developer**
-- Built using React, Node.js, MongoDB, and REST APIs.
+- Built using PHP, AJAX, React, Node.js, MySQL, and REST APIs.
 
 ### 🧠 Computer Vision Model (AI Project)
 - Developed an AI-based computer vision system for object detection.
-- Used Python, TensorFlow, and OpenCV.
+- Used Python, Roboflow, Colab.
 
 ### 💻 Portfolio Website
 - Designed and deployed using **HTML**, **CSS**, and **JavaScript**.
@@ -30,14 +30,15 @@ I’ve managed and contributed to multiple team projects — from building SaaS 
 
 ## 🛠️ Skills
 - **Frontend:** HTML, CSS, JavaScript, React  
-- **Backend:** Node.js, Express.js  
+- **Backend:** Node.js 
 - **Database:** MongoDB, MySQL  
 - **Cybersecurity:** Ethical Hacking Fundamentals, Network Security, Penetration Testing  
-- **AI/ML:** Python, OpenCV, TensorFlow (Basics)
+- **AI/ML:** Python,v7darwin, Roboflow, OpenCV, TensorFlow (Basics)
 
 ---
 
 ## 🌱 Currently Learning
+- Penetration Testing with Kali Linux
 - MERN Stack (MongoDB, Express, React, Node)
 - Web Application Security & Bug Bounty
 - DevOps Basics for CI/CD
