@@ -871,7 +871,7 @@ footer{
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 400px) {
   .address {
     display: flex;
     font-size: 10px;
