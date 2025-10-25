@@ -1,1 +1,1 @@
-Visit my Portfolio using  https://shruthimeenakshi.github.io/Shruthi_Meenakshi/portfolio/index.html
+Visit my Portfolio using  http://shruthimeenakshi.me/
