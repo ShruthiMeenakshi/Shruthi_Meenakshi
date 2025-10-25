@@ -230,7 +230,7 @@ li.nav-link a {
 
 .name {
   height: 600px;
-  background-image: url("../Media/Myself\ in\ my\ Future\(2\).jpg");
+  background-image: url("media/Myself\ in\ my\ Future\(2\).jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -396,21 +396,21 @@ li.nav-link a {
 }
 
 .pic1 {
-  background-image: url("../Media/CS\ model.png");
+  background-image: url("media/CS\ model.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .pic2 {
-  background-image: url("../Media/canva.png");
+  background-image: url("media/canva.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 0% 25%;
 }
 
 .pic3 {
-  background-image: url("../Media/Dashboard.png");
+  background-image: url("media/Dashboard.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -478,7 +478,7 @@ i.ri-arrow-right-s-line {
   display: flex;
   height: 250px;
   width: 250px;
-  background-image: url("../Media/user-icon.jpg");
+  background-image: url("media/user-icon.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 50px;
