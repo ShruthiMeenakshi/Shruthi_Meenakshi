@@ -253,30 +253,37 @@ li.nav-link a {
   z-index: 1;
   color: white;
   padding: 110px;
+  text-align: center;
 }
 
 .container h1 {
   font-size: 60px;
+  text-align: center;
 }
 
 .container p {
   font-size: 27px;
   margin: 0 0 -29px 0;
+  text-align: center;
 }
 
 .threecolumn {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 3rem;
   font-size: 24px;
 }
 
+.button {
+    margin: 0;
+    max-width: 56rem;   
+}
 .portfoliobtn {
   margin-left: 200px;
 }
 
 .btn {
-  margin-top: 65px;
+  margin-top: 4rem;
 }
 
 .btn:link,
@@ -344,134 +351,31 @@ li.nav-link a {
 }
 
 .work {
-  background-image:linear-gradient(135deg, #ff9b002e 60%, #f2ff001c);
-  margin-top: -20px;
-  height: 100%;
+  background:black;
+  position: relative;
+  overflow: hidden;
+  height: auto;
   padding: 0 50px 50px 50px;
 }
-
-.myworks {
-  padding: 45px 0px 0px 0px;
-}
-
-.myworks h2 {
-  text-align: center;
-  font-size: 40px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.myworks p {
-  text-align: center;
-  color: dimgray;
-  margin-top: -15px;
-  font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.threepic {
-  display: grid;
-  /* use flexible equal columns so items don't overlap on different viewports */
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  justify-items: center;
-  padding-top: 60px;
-  gap: 1rem;
-}
-
-.columnpic {
-  /* let the grid cell control sizing; make card responsive */
+#myVideo {
+  position: absolute;
+  inset: 0; /* top:0; right:0; bottom:0; left:0; */
   width: 100%;
-  max-width: 360px;
-  border-radius: 16px;
-  border: none;
-  padding: 0.75rem;
-  box-sizing: border-box;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
+  height: 100%;
+  object-fit: cover; 
+  opacity: 0.4;
+  z-index: 0;
+  pointer-events: none; /* allow clicks on content above */
 }
 
-.pic1,
-.pic2,
-.pic3 {
-  /* full width card image area — avoid negative margins which cause overlap */
-  height: 200px;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  border-radius: 12px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+/* ensure content sits above the video */
+.profile,
+.work .container,
+.work .profile * {
+  position: relative;
+  z-index: 1;
 }
 
-.pic1 {
-  background-image: url("media/CS\ model.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.pic2 {
-  background-image: url("media/canva.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 0% 25%;
-}
-
-.pic3 {
-  background-image: url("media/Dashboard.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.bigpicname {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  width: 100%;
-  max-width: 330px;
-  margin: 0.5rem 0 0 0;
-}
-
-.picname {
-  width: 275px;
-}
-
-.picname p {
-  color: dimgray;
-}
-
-.moreinfo {
-  width: 40px;
-  height: 40px;
-  background-color: rgb(247, 172, 192);
-  margin: 47px 10px 10px 21px;
-  border-radius: 10px;
-  align-content: center;
-  text-align: center;
-  cursor: pointer;
-  transition: transform 250ms;
-  font-size: 25px;
-}
-
-.moreinfo:hover {
-  transform: translateX(10px);
-}
-
-.moreinfo a {
-  text-decoration: none;
-}
-
-i.ri-arrow-right-s-line {
-  color: #434343;
-}
-/*
-.bigprofile {
-  height: 1200px;
-  background-color: rgb(248, 246, 246);
-}
-*/
 .profile {
   display: grid;
   grid-template-columns: 71% 33%;
@@ -979,49 +883,7 @@ footer{
     margin-left: 9rem;
   }
 
-  .threepic {
-    grid-template-columns: 1fr;
-        gap: 35px;
-        margin-left: 0rem;
-        padding: 0rem 0rem 0rem 0rem;
-  }
-  .columnpic {
-    width: 100%;
-    max-width: 100%;
-    border-radius: 12px;
-    border: none;
-    padding: 0.75rem;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    margin-left: 0;
-    box-sizing: border-box;
-  }
-  .pic1, .pic2, .pic3 {
-    height: 180px;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    border-radius: 12px;
-    background-size: cover;
-    background-position: center;
-  }
-.bigpicname {
-    display: grid;
-    grid-template-columns: 60% 24%;
-    width: 330px;
-    margin: 0px -120px;
-    font-size: 0.8rem;
-}
-.picname {
-   padding: 1rem 0rem 0rem 9rem;
-}
-.moreinfo {
-    width: 2rem;
-    height: 2rem;
-    margin: 3rem 0 0 9rem;
-    font-size: 1rem;
-}
+
 
   .profile {
     grid-template-columns: 1fr;
