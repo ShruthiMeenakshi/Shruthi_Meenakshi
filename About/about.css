@@ -829,6 +829,12 @@
     background-size: cover;
     background-position: center;
 }
+.gradient-15 {
+    background-image: url("../media/Netflix.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
 
 /* New styles for title with navigation buttons */
 .section-header {
