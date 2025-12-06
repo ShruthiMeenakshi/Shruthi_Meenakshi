@@ -11,6 +11,22 @@ body {
   padding: 0;
   height: 100%;
 }
+.star {
+  position: fixed;
+  pointer-events: none;
+  will-change: transform, opacity;
+  font-size: 18px;
+  transform-origin: center;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.6));
+  animation-name: starFloat;
+  animation-timing-function: cubic-bezier(.2,.9,.3,1);
+}
+
+/* star animation */
+@keyframes starFloat {
+  0% { opacity:1; transform: translate3d(0,0,0) rotate(0deg) scale(1); }
+  100% { opacity:0; transform: translate3d(var(--tx,0px), var(--ty,-40px), 0) rotate(var(--rot,360deg)) scale(0.5); }
+}
 
 header {
   height: 100px;

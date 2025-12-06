@@ -51,6 +51,7 @@
 
 <body>
     <section class="display">
+        <div class="cursor-dot" id="cursorDot"></div>
         <section class="name">
             <div class="container">
                 <p>Welcome to my Portfolio</p>
@@ -183,5 +184,46 @@
         <p>&copy; 2025 Shruthi Meenakshi. All rights reserved.</p>
     </div>
 </footer>
+<script>
+const STAR_COUNT = 5;
+const COLORS = ["#ffd166","#ff6b6b","#c7f9cc","#9be7ff","#f3a6ff"];
+const cursorDot = document.getElementById("cursorDot");
+
+window.addEventListener("mousemove", (e) => {
+  cursorDot.style.left = e.clientX + "px";
+  cursorDot.style.top = e.clientY + "px";
+
+  for (let i = 0; i < STAR_COUNT; i++) createStar(e.clientX, e.clientY);
+});
+
+function createStar(x, y) {
+  const el = document.createElement("div");
+  el.className = "star";
+
+  el.innerHTML = `
+      <svg width="20" height="20" viewBox="0 0 24 24">
+        <path d="M12 2l2.6 6.9L21 11l-5 3.8L17 21l-5-3.2L7 21l1-6.2L3 11l6.4-2.1z" fill="currentColor"/>
+      </svg>
+  `;
+
+  const size = Math.random() * 10 + 10;
+  const rot = Math.random() * 360;
+  const tx = Math.random() * 40 - 20;
+  const ty = -40 - Math.random() * 40;
+
+  el.style.left = x - size/2 + "px";
+  el.style.top = y - size/2 + "px";
+  el.style.color = COLORS[Math.floor(Math.random() * COLORS.length)];
+  el.style.setProperty("--rot", rot + "deg");
+  el.style.setProperty("--tx", tx + "px");
+  el.style.setProperty("--ty", ty + "px");
+  el.style.animationDuration = 800 + "ms";
+
+  document.body.appendChild(el);
+
+  el.addEventListener("animationend", () => el.remove());
+}
+</script>
+
 
 </html>
